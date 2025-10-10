@@ -68,12 +68,27 @@ h2 {
 /* Footer */
 footer {
   text-align: center;
-  background: linear-gradient(135deg, #12376B, #0A1F44);
+  background: radial-gradient(circle at top, #12376B, #0A1F44 80%);
   color: #FFD54F;
-  padding: 15px 10px;
-  flex-shrink: 0;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  padding: 25px 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer span {
+  color: #FFE27A;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer span:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #FFD54F;
 }
 
 /* Links in main */
