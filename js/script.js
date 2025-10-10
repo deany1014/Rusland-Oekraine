@@ -56,6 +56,9 @@ const linkFixer = setInterval(() => {
 	attempts++;
 }, retryInterval);
 
+
+
+// Canvas achtergrond met interactief grid
 const canvas = document.getElementById('backgroundCanvas');
 const ctx = canvas.getContext('2d');
 
