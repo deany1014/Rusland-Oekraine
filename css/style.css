@@ -1,4 +1,11 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #000000;
@@ -23,6 +30,7 @@ nav a:hover {
 }
 
 main {
+  flex: 1 0 auto; /* grow to fill available space so footer is pushed to bottom */
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -35,4 +43,5 @@ footer {
   background-color: #005bbb;
   color: white;
   padding: 10px;
+  flex-shrink: 0; /* don't let footer shrink */
 }
