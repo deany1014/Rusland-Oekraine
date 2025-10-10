@@ -1,47 +1,87 @@
 html, body {
   height: 100%;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #0E1217;
+  color: #E5E5E5;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #000000;
-  color: #ffffff;
+  min-height: 100vh;
 }
 
+/* Header */
 header {
-  background-color: #005bbb;
-  color: white;
+  background: linear-gradient(135deg, #0A1F44, #12376B);
+  color: #FFD54F;
   text-align: center;
-  padding: 20px;
+  padding: 30px 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-  color: rgb(255, 255, 255);
-  margin: 0 10px;
+  color: #FFD54F;
+  margin: 0 12px;
   text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
+  background: rgba(255, 213, 79, 0.15);
+  text-decoration: none;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #10151D;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  color: #FFD54F;
+  border-bottom: 2px solid #FFD54F;
+  padding-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: linear-gradient(135deg, #12376B, #0A1F44);
+  color: #FFD54F;
+  padding: 15px 10px;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Links in main */
+main a {
+  color: #FFD54F;
   text-decoration: underline;
 }
 
-main {
-  flex: 1 0 auto; /* grow to fill available space so footer is pushed to bottom */
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: rgb(0, 0, 0);
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  background-color: #005bbb;
-  color: white;
-  padding: 10px;
-  flex-shrink: 0; /* don't let footer shrink */
+main a:hover {
+  color: #FFE27A;
 }
