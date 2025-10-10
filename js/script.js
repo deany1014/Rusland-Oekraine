@@ -13,9 +13,28 @@ async function loadPartial(id, path) {
 	}
 }
 
-// Determine base path: if this page is under /pages/ we need to go up one level for partials
-const isInPages = location.pathname.startsWith('/pages/');
-const partialPrefix = isInPages ? '../partials/' : 'partials/';
+// Helper to decide if current document is inside a subfolder like /pages/
+function isInSubfolder(folderName) {
+	const parts = location.pathname.split('/').filter(Boolean);
+	return parts[0] === folderName;
+}
 
-loadPartial('site-header', partialPrefix + 'header.html');
+const inPages = isInSubfolder('pages');
+const partialPrefix = inPages ? '../partials/' : 'partials/';
+
+// After loading header, fix links that use data-href so they work on root and in /pages/
+async function loadHeaderAndFixLinks() {
+	await loadPartial('site-header', partialPrefix + 'header.html');
+	const headerEl = document.getElementById('site-header');
+	if (!headerEl) return;
+	const anchors = headerEl.querySelectorAll('a[data-href]');
+	anchors.forEach(a => {
+		const target = a.getAttribute('data-href');
+		// If we're in pages/ we need to prefix with ../ unless target is already absolute
+		const href = inPages && !target.startsWith('/') ? '../' + target : target;
+		a.setAttribute('href', href);
+	});
+}
+
+loadHeaderAndFixLinks();
 loadPartial('site-footer', partialPrefix + 'footer.html');
