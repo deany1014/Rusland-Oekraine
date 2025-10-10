@@ -13,28 +13,45 @@ async function loadPartial(id, path) {
 	}
 }
 
-// Helper to decide if current document is inside a subfolder like /pages/
-function isInSubfolder(folderName) {
-	const parts = location.pathname.split('/').filter(Boolean);
-	return parts[0] === folderName;
-}
+// Determine site base using the actual script URL so paths are correct on GitHub Pages
+// document.currentScript.src gives an absolute URL (e.g. https://.../Rusland-Oekraine/js/script.js)
+const scriptUrl = (document.currentScript && document.currentScript.src)
+	? new URL(document.currentScript.src)
+	: new URL(location.href);
+// siteBase ends with a trailing slash, pointing to repo root (or site root)
+const siteBase = scriptUrl.origin + scriptUrl.pathname.replace(/\/js\/[^/]+$/, '/');
 
-const inPages = isInSubfolder('pages');
-const partialPrefix = inPages ? '../partials/' : 'partials/';
+// Load partials from the computed siteBase
+loadPartial('site-header', siteBase + 'partials/header.html');
+loadPartial('site-footer', siteBase + 'partials/footer.html');
 
-// After loading header, fix links that use data-href so they work on root and in /pages/
-async function loadHeaderAndFixLinks() {
-	await loadPartial('site-header', partialPrefix + 'header.html');
+// After header is available, convert data-href targets into absolute hrefs based on siteBase
+async function fixHeaderLinks() {
 	const headerEl = document.getElementById('site-header');
 	if (!headerEl) return;
 	const anchors = headerEl.querySelectorAll('a[data-href]');
 	anchors.forEach(a => {
 		const target = a.getAttribute('data-href');
-		// If we're in pages/ we need to prefix with ../ unless target is already absolute
-		const href = inPages && !target.startsWith('/') ? '../' + target : target;
-		a.setAttribute('href', href);
+		// new URL will resolve relative to siteBase correctly
+		try {
+			const resolved = new URL(target, siteBase).href;
+			a.setAttribute('href', resolved);
+		} catch (e) {
+			// fallback: set as given
+			a.setAttribute('href', target);
+		}
 	});
 }
 
-loadHeaderAndFixLinks();
-loadPartial('site-footer', partialPrefix + 'footer.html');
+// Retry until header is loaded (header is inserted asynchronously)
+let attempts = 0;
+const maxAttempts = 20;
+const retryInterval = 150;
+const linkFixer = setInterval(() => {
+	const headerEl = document.getElementById('site-header');
+	if (headerEl || attempts >= maxAttempts) {
+		clearInterval(linkFixer);
+		fixHeaderLinks();
+	}
+	attempts++;
+}, retryInterval);
