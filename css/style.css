@@ -1,15 +1,15 @@
-html, body {
+html {
   height: 100%;
-  margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background-color: #0E1217;
-  color: #E5E5E5;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #0E1217;
+  color: #E5E5E5;
 }
 
 /* Header */
@@ -48,25 +48,53 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Main content */
+/* Main container */
 main {
-  flex: 1;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* ruimte tussen panels */
+  padding: 40px 15px;
   max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #10151D;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
 }
 
+/* Individual panels (sections) */
+main section {
+  width: 100%;
+  background: #10151D;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.25);
+}
+
+/* Section titles */
 h2 {
   color: #FFD54F;
   border-bottom: 2px solid #FFD54F;
   padding-bottom: 5px;
 }
 
+/* Links */
+main a {
+  color: #FFD54F;
+  text-decoration: underline;
+}
+
+main a:hover {
+  color: #FFE27A;
+}
+
 /* Footer */
 footer {
+  flex-shrink: 0;
   text-align: center;
   background: radial-gradient(circle at top, #12376B, #0A1F44 80%);
   color: #FFD54F;
@@ -89,14 +117,4 @@ footer span {
 footer span:hover {
   color: #ffffff;
   text-shadow: 0 0 8px #FFD54F;
-}
-
-/* Links in main */
-main a {
-  color: #FFD54F;
-  text-decoration: underline;
-}
-
-main a:hover {
-  color: #FFE27A;
 }
