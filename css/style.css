@@ -30,22 +30,42 @@ header h1 {
 
 /* Navigation */
 nav {
-  margin-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
+/* Links as buttons */
 nav a {
-  color: #FFD54F;
-  margin: 0 12px;
+  display: inline-block;
+  color: #0A1F44;
+  background-color: #FFD54F;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Hover effect */
 nav a:hover {
-  background: rgba(255, 213, 79, 0.15);
+  background: #FFE27A;
+  color: #0A1F44;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 213, 79, 0.3);
   text-decoration: none;
+}
+
+/* Active or focused button */
+nav a:active,
+nav a:focus {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(255, 213, 79, 0.4);
+  outline: none;
 }
 
 /* Main container */
