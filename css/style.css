@@ -150,6 +150,25 @@ footer span {
 }
 
 footer span:hover {
-  color: #ffffff;
-  text-shadow: 0 0 8px #FFD54F;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowPulse 8s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes rainbowPulse {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
