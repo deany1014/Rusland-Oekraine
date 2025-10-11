@@ -1,4 +1,9 @@
-console.log("Site geladen! 🇺🇦");
+function loadScript(src) {
+  const script = document.createElement('script');
+  script.src = src;
+  script.defer = true;
+  document.head.appendChild(script);
+}
 
 async function loadPartial(id, path) {
 	const el = document.getElementById(id);
@@ -24,33 +29,6 @@ const siteBase = scriptUrl.origin + scriptUrl.pathname.replace(/\/js\/[^/]+$/, '
 // Load partials from the computed siteBase
 loadPartial('site-header', siteBase + 'partials/header.html');
 loadPartial('site-footer', siteBase + 'partials/footer.html');
-
-// Ensure favicon uses the same siteBase (fixes GitHub Pages project site paths)
-try {
-	let iconLink = document.querySelector("link[rel~='icon']");
-	if (!iconLink) {
-		iconLink = document.createElement('link');
-		iconLink.rel = 'icon';
-		document.head.appendChild(iconLink);
-	}
-	// Try to use the real favicon on the server; if it's missing/invalid, fall back to an embedded tiny icon
-	(async () => {
-		const candidate = siteBase + 'static/favicon.ico';
-		try {
-			const res = await fetch(candidate, { method: 'HEAD' });
-			if (res.ok) {
-				iconLink.href = candidate;
-				return;
-			}
-		} catch (e) {
-			// ignore and fall back
-		}
-		// Embedded 16x16 placeholder icon (tiny base64 ICO)
-		iconLink.href = 'data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAA////AA==';
-	})();
-} catch (e) {
-	console.warn('Kon favicon niet zetten:', e);
-}
 
 // After header is available, convert data-href targets into absolute hrefs based on siteBase
 async function fixHeaderLinks() {
@@ -83,50 +61,10 @@ const linkFixer = setInterval(() => {
 	attempts++;
 }, retryInterval);
 
+// favicon script
+loadScript(siteBase + 'js/favicon.js');
 
+// background script
+loadScript(siteBase + 'js/background.js');
 
-// Canvas achtergrond met interactief grid
-const canvas = document.getElementById('backgroundCanvas');
-const ctx = canvas.getContext('2d');
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-const gridSize = 50;
-let mouse = { x: 0, y: 0 };
-
-window.addEventListener('mousemove', e => {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-});
-
-function drawGrid() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let x = 0; x < canvas.width; x += gridSize) {
-    for (let y = 0; y < canvas.height; y += gridSize) {
-      // afstand tot muis berekenen
-      let dx = mouse.x - x;
-      let dy = mouse.y - y;
-      let dist = Math.sqrt(dx*dx + dy*dy);
-      let alpha = Math.min(0.3, 1 / (dist / 50 + 1));
-
-      ctx.strokeStyle = `rgba(255, 213, 79, ${alpha})`; // lichtgele lijnen
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      ctx.lineTo(x + gridSize, y);
-      ctx.lineTo(x + gridSize, y + gridSize);
-      ctx.lineTo(x, y + gridSize);
-      ctx.closePath();
-      ctx.stroke();
-    }
-  }
-
-  requestAnimationFrame(drawGrid);
-}
-
-drawGrid();
+console.log("Site geladen! 🇺🇦");
