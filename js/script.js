@@ -24,6 +24,7 @@
 		.then(() => loadScript(siteBase + 'js/partials.js'))
 		.then(() => loadScript(siteBase + 'js/favicon.js'))
 		.then(() => loadScript(siteBase + 'js/background.js'))
+		.then(() => loadScript(siteBase + 'js/dodenchart.js'))
 		.then(() => {
 			// initialize partials
 			if (window.loadPartials) {
