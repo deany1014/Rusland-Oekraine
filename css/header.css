@@ -1,0 +1,57 @@
+/* Header */
+header {
+  background: linear-gradient(135deg, #0A1F44, #12376B);
+  color: #FFD54F;
+  text-align: center;
+  padding: 30px 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Links as glass buttons */
+nav a {
+  display: inline-block;
+  color: #FFD54F;
+  background: rgba(255, 213, 79, 0.15); /* semi-transparant geel */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 213, 79, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect */
+nav a:hover {
+  background: rgba(255, 213, 79, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 213, 79, 0.4);
+  color: #0A1F44;
+  text-decoration: none;
+}
+
+/* Active/focus state */
+nav a:active,
+nav a:focus {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(255, 213, 79, 0.4);
+  outline: none;
+}
