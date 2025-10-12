@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/static/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Betrokkenen — Oekraïne-Rusland</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+  <canvas id="backgroundCanvas"></canvas>
+
+  <main>
+    <!-- Oekraïne -->
+    <section class="people-group ukrainian">
+      <h2>🇺🇦 Oekraïense Personen</h2>
+      <div id="ukraine-people-list" class="people-list"></div>
+    </section>
+
+    <!-- Rusland -->
+    <section class="people-group russian">
+      <h2>🇷🇺 Russische Personen</h2>
+      <div id="russian-people-list" class="people-list"></div>
+    </section>
+
+    <section>
+      <h2>Bronnen</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Russo-Ukrainian_War#:~:text=Commanders%20and%20leaders" target="_blank" rel="noopener">Engelse Wikipedia</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Embedded script -->
+  <script>
+  async function loadPeople() {
+    try {
+      const response = await fetch("../static/betrokkenen.json");
+      if (!response.ok) throw new Error("Kon betrokkenen.json niet laden");
+      const people = await response.json();
+      renderPeople(people);
+    } catch (err) {
+      console.error("Fout bij laden van betrokkenen:", err);
+    }
+  }
+
+  function renderPeople(people) {
+    const ukraineList = document.getElementById("ukraine-people-list");
+    const russianList = document.getElementById("russian-people-list");
+
+    people.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "person-card";
+      card.innerHTML = `
+        <div class="person-photo">
+          <img src="${p.photo}" alt="${p.name}">
+        </div>
+        <div class="person-body">
+          <h3>${p.name}</h3>
+          <p class="role">${p.role}</p>
+          <p class="desc">${p.desc}</p>
+          <a href="${p.link}" target="_blank" rel="noopener">Meer info →</a>
+        </div>
+      `;
+      if (p.group === "ukraine") {
+        ukraineList.appendChild(card);
+      } else if (p.group === "russia") {
+        russianList.appendChild(card);
+      }
+    });
+  }
+
+  loadPeople();
+  </script>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 @import url(./footer.css);
 @import url(./header.css);
 @import url(./background.css);
+@import url(./people.css);
 
 html {
   height: 100%;
