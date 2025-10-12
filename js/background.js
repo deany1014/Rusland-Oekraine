@@ -9,7 +9,7 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-const gridSize = 50;
+const gridSize = 35;
 let mouse = { x: 0, y: 0 };
 
 window.addEventListener('mousemove', e => {
