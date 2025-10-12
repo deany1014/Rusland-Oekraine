@@ -1,25 +1,9 @@
 [
   {
-    "name": "Volodymyr Zelensky",
-    "role": "President van Oekraïne",
-    "desc": "Voormalig acteur en komiek, sinds 2019 president van Oekraïne.",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Volodymyr_Zelensky_Official_Portrait.jpg",
-    "link": "https://nl.wikipedia.org/wiki/Volodymyr_Zelensky",
-    "group": "ukraine"
-  },
-  {
-    "name": "Valerii Zaloezjny",
-    "role": "Opperbevelhebber van de Oekraïense strijdkrachten",
-    "desc": "Bekend om zijn moderne aanpak van oorlogsvoering en leiderschap.",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Valerii_Zaluzhnyi_%28cropped%29.jpg",
-    "link": "https://nl.wikipedia.org/wiki/Valerii_Zaloezjny",
-    "group": "ukraine"
-  },
-  {
     "name": "Vladimir Poetin",
     "role": "President van Rusland",
     "desc": "Leider van Rusland sinds 1999, verantwoordelijk voor de invasie van Oekraïne in 2022.",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Vladimir_Putin_%282022-02-21%29.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%2808-03-2024%29_%28cropped%29_%28higher_res%29.jpg/339px-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9F%D1%83%D1%82%D0%B8%D0%BD_%2808-03-2024%29_%28cropped%29_%28higher_res%29.jpg",
     "link": "https://nl.wikipedia.org/wiki/Vladimir_Poetin",
     "group": "russia"
   },
@@ -27,8 +11,160 @@
     "name": "Sergej Sjojgoe",
     "role": "Minister van Defensie van Rusland",
     "desc": "Een van de belangrijkste strategische figuren in de Russische militaire operaties.",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sergey_Shoigu_%282021-04-22%29.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Official_portrait_of_Sergey_Shoigu.jpg/330px-Official_portrait_of_Sergey_Shoigu.jpg",
     "link": "https://nl.wikipedia.org/wiki/Sergej_Sjojgoe",
     "group": "russia"
+  },
+  {
+    "name": "Valeri Gerasimov",
+    "role": "Chef van de generale staf van de Russische strijdkrachten",
+    "desc": "Hoofd van de militaire planning en strategie van Rusland.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Valery_Gerasimov_official_photo_version_2022-10-03.jpg/330px-Valery_Gerasimov_official_photo_version_2022-10-03.jpg",
+    "link": "https://nl.wikipedia.org/wiki/Valeri_Gerasimov",
+    "group": "russia"
+  },
+  {
+    "name": "Jevgeni Prigozjin",
+    "role": "Oprichter van de Wagner Group",
+    "desc": "Russische ondernemer en leider van de particuliere militaire groep Wagner.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/330px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg",
+    "link": "https://nl.wikipedia.org/wiki/Jevgeni_Prigozjin",
+    "group": "russia"
+  },
+  {
+    "name": "Alexander Zakharchenko",
+    "role": "Leider van de Volksrepubliek Donetsk",
+    "desc": "President van de zelfverklaarde Volksrepubliek Donetsk van 2014 tot 2018.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/2014-12-20._%D0%9F%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA_%D1%81%D0%BE%D0%BB%D0%B8%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8_069_%28cropped%29_%28cropped%29.jpg/371px-2014-12-20._%D0%9F%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA_%D1%81%D0%BE%D0%BB%D0%B8%D0%B4%D0%B0%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8_069_%28cropped%29_%28cropped%29.jpg",
+    "link": "https://en.wikipedia.org/wiki/Alexander_Zakharchenko",
+    "group": "russia"
+  },
+  {
+    "name": "Denis Pushilin",
+    "role": "Leider van de Volksrepubliek Donetsk",
+    "desc": "President van de zelfverklaarde Volksrepubliek Donetsk sinds 2018.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Denis_Pushilin_%282023-04-06%29.jpg/354px-Denis_Pushilin_%282023-04-06%29.jpg",
+    "link": "https://en.wikipedia.org/wiki/Denis_Pushilin",
+    "group": "russia"
+  },
+  {
+    "name": "Pavel Gubarev",
+    "role": "Politicus in Donetsk",
+    "desc": "Een van de eerste leiders van de pro-Russische beweging in Donetsk in 2014.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2014-12-24._%D0%9C%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D1%8F%2C_%D0%BF%D0%BE%D1%81%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_90-%D0%BB%D0%B5%D1%82%D0%B8%D1%8E_%D1%81%D0%BE_%D0%B4%D0%BD%D1%8F_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BA%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F_32_%28cropped%29.JPG/480px-thumbnail.jpg",
+    "link": "https://en.wikipedia.org/wiki/Pavel_Gubarev",
+    "group": "russia"
+  },
+  {
+    "name": "Igor Girkin",
+    "role": "Militair leider in Donbass",
+    "desc": "Russische militaire leider actief in de oorlog in Oost-Oekraïne in 2014.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Igor_Ivanovich_Strelkov_Yekaterinburg3.JPG/320px-Igor_Ivanovich_Strelkov_Yekaterinburg3.JPG",
+    "link": "https://en.wikipedia.org/wiki/Igor_Girkin",
+    "group": "russia"
+  },
+  {
+    "name": "Leonid Pasechnik",
+    "role": "Leider van de Volksrepubliek Loegansk",
+    "desc": "President van de zelfverklaarde Volksrepubliek Loegansk sinds 2017.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Leonid_Pasechnik_%282023-04-06%29.jpg/359px-Leonid_Pasechnik_%282023-04-06%29.jpg",
+    "link": "https://en.wikipedia.org/wiki/Leonid_Pasechnik",
+    "group": "russia"
+  },
+  {
+    "name": "Igor Plotnitsky",
+    "role": "Leider van de Volksrepubliek Loegansk",
+    "desc": "President van de zelfverklaarde Volksrepubliek Loegansk van 2014 tot 2017.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Ihor_Plotnytskiy.jpg",
+    "link": "https://en.wikipedia.org/wiki/Igor_Plotnitsky",
+    "group": "russia"
+  },
+  {
+    "name": "Valery Bolotov",
+    "role": "Leider van de Volksrepubliek Loegansk",
+    "desc": "Eerste leider van de zelfverklaarde Volksrepubliek Loegansk in 2014.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valeri_Bolotov.png/436px-Valeri_Bolotov.png",
+    "link": "https://en.wikipedia.org/wiki/Valery_Bolotov",
+    "group": "russia"
+  },
+  {
+    "name": "Volodymyr Zelenskyj",
+    "role": "President van Oekraïne",
+    "desc": "President van Oekraïne sinds 2019, leidend figuur tijdens de Russische invasie.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Volodymyr_Zelenskyy_in_2022.jpg/346px-Volodymyr_Zelenskyy_in_2022.jpg",
+    "link": "https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy",
+    "group": "ukraine"
+  },
+  {
+    "name": "Petro Porosjenko",
+    "role": "President van Oekraïne",
+    "desc": "President van Oekraïne van 2014 tot 2019.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/EPP_Congress_Rotterdam_-_Day_1_%2852113152023%29_%28cropped_2%29.jpeg/358px-EPP_Congress_Rotterdam_-_Day_1_%2852113152023%29_%28cropped_2%29.jpeg",
+    "link": "https://en.wikipedia.org/wiki/Petro_Poroshenko",
+    "group": "ukraine"
+  },
+  {
+    "name": "Oleksandr Turchynov",
+    "role": "Waarnemend president van Oekraïne",
+    "desc": "Waarnemend president in 2014 na de Maidan-revolutie.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Oleksandr_Turchynov_in_August_2014.jpg/318px-Oleksandr_Turchynov_in_August_2014.jpg",
+    "link": "https://en.wikipedia.org/wiki/Oleksandr_Turchynov",
+    "group": "ukraine"
+  },
+  {
+    "name": "Andrii Zahorodniuk",
+    "role": "Minister van Defensie van Oekraïne",
+    "desc": "Minister van Defensie van 2019 tot 2020.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%97%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8E%D0%BA_%D0%9A%D0%9C%D0%A3.jpg/432px-%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%97%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8E%D0%BA_%D0%9A%D0%9C%D0%A3.jpg",
+    "link": "https://en.wikipedia.org/wiki/Andrii_Zahorodniuk",
+    "group": "ukraine"
+  },
+  {
+    "name": "Stepan Poltorak",
+    "role": "Minister van Defensie van Oekraïne",
+    "desc": "Minister van Defensie van 2014 tot 2019.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Stepan_Poltorak_portrait.jpg/359px-Stepan_Poltorak_portrait.jpg",
+    "link": "https://en.wikipedia.org/wiki/Stepan_Poltorak",
+    "group": "ukraine"
+  },
+  {
+    "name": "Valeriy Heletey",
+    "role": "Minister van Defensie van Oekraïne",
+    "desc": "Minister van Defensie in 2014.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Valeriy_Heletey_2014_%28cropped%29.jpg/359px-Valeriy_Heletey_2014_%28cropped%29.jpg",
+    "link": "https://en.wikipedia.org/wiki/Valeriy_Heletey",
+    "group": "ukraine"
+  },
+  {
+    "name": "Ihor Tenyukh",
+    "role": "Minister van Defensie van Oekraïne",
+    "desc": "Minister van Defensie in 2014 voor een korte periode.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/%D0%A2%D0%B5%D0%BD%D1%8E%D1%85_%D0%86%D0%B3%D0%BE%D1%80_%D0%99%D0%BE%D1%81%D0%B8%D0%BF%D0%BE%D0%B2%D0%B8%D1%87.jpg/388px-%D0%A2%D0%B5%D0%BD%D1%8E%D1%85_%D0%86%D0%B3%D0%BE%D1%80_%D0%99%D0%BE%D1%81%D0%B8%D0%BF%D0%BE%D0%B2%D0%B8%D1%87.jpg",
+    "link": "https://en.wikipedia.org/wiki/Ihor_Tenyukh",
+    "group": "ukraine"
+  },
+  {
+    "name": "Oleksandr Syrskyi",
+    "role": "Commandant van de Oekraïense strijdkrachten",
+    "desc": "Commandant sinds 2024, leidend in de Oekraïense militaire strategie.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/OleskandrSyrskyiColonelGeneral.jpg/363px-OleskandrSyrskyiColonelGeneral.jpg",
+    "link": "https://en.wikipedia.org/wiki/Oleksandr_Syrskyi",
+    "group": "ukraine"
+  },
+  {
+    "name": "Valerii Zaluzhnyi",
+    "role": "Commandant van de Oekraïense strijdkrachten",
+    "desc": "Commandant van de Oekraïense strijdkrachten van 2021 tot 2024.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lieutenant_General_Valerii_Zaluzhnyi_%283x4_cropped%29.jpg/358px-Lieutenant_General_Valerii_Zaluzhnyi_%283x4_cropped%29.jpg",
+    "link": "https://en.wikipedia.org/wiki/Valerii_Zaluzhnyi",
+    "group": "ukraine"
+  },
+  {
+    "name": "Ruslan Khomchak",
+    "role": "Commandant van de Oekraïense strijdkrachten",
+    "desc": "Commandant van 2019 tot 2021, speelde een belangrijke rol bij de hervorming van het leger.",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/010328290efe0a1d6f7aa628872fb40c.i900x1285x701.jpg/336px-010328290efe0a1d6f7aa628872fb40c.i900x1285x701.jpg",
+    "link": "https://en.wikipedia.org/wiki/Ruslan_Khomchak",
+    "group": "ukraine"
   }
 ]
