@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Pagina niet gevonden</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: radial-gradient(circle at top, #12376B, #0A1F44 80%);
+      color: #FFD54F;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin: 0 0 10px 0;
+      color: #FFE27A;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: #0A1F44;
+      background: #FFD54F;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+    }
+
+    a:hover {
+      background: #FFE27A;
+      transform: translateY(-2px);
+      box-shadow: 0 0 12px rgba(255, 213, 79, 0.4);
+    }
+
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="backgroundCanvas"></canvas>
+
+  <h1>404</h1>
+  <p>Oeps! Deze pagina bestaat niet (meer).</p>
+  <a href="/">Terug naar de homepage</a>
+
+  <script>
+    // Klein effect met achtergrond (optioneel)
+    const canvas = document.getElementById('backgroundCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    let t = 0;
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < 80; i++) {
+        const x = (i * 40 + (t * 20) % 40) % canvas.width;
+        const y = Math.sin(i / 3 + t / 10) * 50 + canvas.height / 2;
+        ctx.fillStyle = `rgba(255, 213, 79, 0.3)`;
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      t += 0.5;
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>
