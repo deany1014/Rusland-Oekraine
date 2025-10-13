@@ -15,12 +15,6 @@ footer p {
 }
 
 footer span {
-  color: #FFE27A;
-  font-weight: 600;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-footer span:hover {
   background: linear-gradient(
     90deg,
     red,
