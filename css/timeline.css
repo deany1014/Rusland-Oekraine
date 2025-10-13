@@ -1,0 +1,93 @@
+/* ======================================================================
+   TIMELINE LIST
+   ====================================================================== */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+/* Timeline Entry (gebaseerd op person-card) */
+.timeline-entry {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.timeline-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Image (links) */
+.timeline-entry img {
+  flex: 0 0 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  object-fit: cover;
+}
+
+/* Content (rechts) */
+.timeline-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+  color: #FFD54F;
+}
+
+.timeline-content p {
+  margin: 0 0 8px;
+  color: #dcdcdc;
+  font-size: 0.95rem;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* Link styling */
+.timeline-content a {
+  color: #FFD54F;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.timeline-content a:hover {
+  text-decoration: underline;
+}
+
+/* ======================================================================
+   RESPONSIVE DESIGN
+   ====================================================================== */
+@media (max-width: 700px) {
+  .timeline-entry {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-entry img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .timeline-content {
+    text-align: center;
+  }
+}
