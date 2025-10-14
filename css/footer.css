@@ -30,7 +30,7 @@ footer span {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rainbowPulse 8s ease-in-out infinite alternate;
+  animation: rainbowPulse 3s ease-in-out infinite alternate;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
