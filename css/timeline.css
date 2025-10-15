@@ -1,3 +1,4 @@
+@import "https://codepen.io/cbolson/pen/rNEdgKo.css" layer(template);
 @layer template, demo;
 
 @layer demo {
@@ -40,11 +41,11 @@
     --info-offset-y: 30px;
 
     box-sizing: content-box;
-    position: fixed;
+    position: relative;
     inset: 0;
     margin: 5rem auto;
     width: var(--cards-container-size);
-    height: 500px;
+    height: var(--cards-container-size);
     padding: var(--cards-container-padding);
    
 
@@ -211,4 +212,4 @@
   .cards:has(li:nth-child(24)>input:checked) { --index: 23; }
   .cards:has(li:nth-child(25)>input:checked) { --index: 24; }
   .cards:has(li:nth-child(26)>input:checked) { --index: 25; }
-}
+  .cards:has(li:nth-child(27)>input:checked) { --index: 26; }
