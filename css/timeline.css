@@ -183,6 +183,47 @@
   .cards:has(input:checked) {
     transform: rotate(calc(var(--base-rotation) - (var(--index) * var(--full-circle) / var(--items))));
   }
-  /*
-  this would be so much simpler if we could use counter values as custom property values
-  */
+
+
+    /* ===== Afbeeldingen binnen de tijdlijnkaarten ===== */
+  .timeline-image {
+    display: block;
+    margin: 1rem auto 0 auto;
+    max-width: min(80%, 400px);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+
+  /* Hover-effect (wanneer actief item is geselecteerd) */
+  li:has(input:checked) .timeline-image {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Extra: animatie als je wilt dat ze zacht inblenden */
+  .timeline-image {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  li:has(input:checked) .timeline-image {
+    opacity: 1;
+  }
+
+  /* Bron-link styling */
+  .cards li a {
+    color: steelblue;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .cards li a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+  }
