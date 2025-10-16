@@ -1,88 +1,48 @@
-// ================================
-//  Tijdlijn Loader & Renderer
-// ================================
-
-async function loadTimeline() {
-  const timelineSection = document.querySelector('#timeline-section');
-  if (!timelineSection) {
-    console.warn('Tijdlijnsectie niet gevonden in HTML.');
-    return;
-  }
-
-  timelineSection.innerHTML = '<h2>Tijdlijn</h2><p>Bezig met laden...</p>';
-
-  try {
-    // JSON ophalen
-    const response = await fetch(`${window.siteBase}static/data/timeline.json`);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-    const data = await response.json();
-
-    if (!Array.isArray(data) || data.length === 0) {
-      timelineSection.innerHTML = '<h2>Tijdlijn</h2><p>Geen data gevonden.</p>';
-      return;
-    }
-
-    renderTimeline(data, timelineSection);
-
-  } catch (err) {
-    console.error('Kon tijdlijn niet laden:', err);
-    timelineSection.innerHTML = `
-      <h2>Tijdlijn</h2>
-      <p style="color:#ff7777;">Er is een fout opgetreden bij het laden van de tijdlijn.</p>
-    `;
-  }
+function parseDate(dateStr) {
+  const [day, month, year] = dateStr.split("/").map(Number);
+  return new Date(year, month - 1, day);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const ul = document.querySelector(".cards");
+  if (!ul) return;
 
-// ================================
-//  Tijdlijn Renderer
-// ================================
+  fetch("../pages/static/data/timeline.json")
+    .then(response => response.json())
+    .then(timelineData => {
+      // Sorteren op datum (oud → nieuw)
+      const sorted = timelineData.sort((a, b) => parseDate(a.date) - parseDate(b.date));
 
-function renderTimeline(data, container) {
-  container.innerHTML = '<h2>Tijdlijn</h2>';
+      // Bouw de <li> elementen
+      ul.innerHTML = "";
+      sorted.forEach((item, i) => {
+        const li = document.createElement("li");
+        li.style.setProperty("--i", i);
 
-  const list = document.createElement('div');
-  list.className = 'timeline-list';
+      li.innerHTML = `
+        <input type="radio" id="item-${i}" name="gallery-item" ${i === 0 ? "checked" : ""}>
+        <label for="item-${i}">${item.date}</label>
+        <h2>${item.title}</h2>
+        <p>${item.description}<br><a href="${item.source}" target="_blank">Bron</a></p>
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" class="timeline-image">` : ""}
+      `;
 
-  // Sorteer chronologisch (oudste bovenaan)
-  data.sort((a, b) => {
-    const [da, ma, ya] = a.date.split('/').map(Number);
-    const [db, mb, yb] = b.date.split('/').map(Number);
-    return new Date(ya, ma - 1, da) - new Date(yb, mb - 1, db);
-  });
+        ul.appendChild(li);
+      });
 
-  const safe = (value) => (value ? value : '—');
+      // --- Pas CSS custom properties toe na het toevoegen ---
+      const items = ul.querySelectorAll("li");
+      ul.style.setProperty("--items", items.length);
 
-  // Maak elk tijdlijn-item
-  data.forEach(item => {
-    const entry = document.createElement('div');
-    entry.className = 'timeline-entry';
+      items.forEach((li, index) => {
+        li.style.setProperty("--i", index);
 
-    const imageUrl = item.image
-      ? (item.image.startsWith('http') ? item.image : `${window.siteBase}${item.image}`)
-      : `${window.siteBase}static/images/placeholder.jpg`;
-
-    entry.innerHTML = `
-      <img src="${imageUrl}" alt="${safe(item.title)}" />
-      <div class="timeline-content">
-        <h3>${safe(item.title)}</h3>
-        <p>${safe(item.description)}</p>
-        <p class="timeline-date">${safe(item.date)}</p>
-        ${item.source ? `<a href="${item.source}" target="_blank" rel="noopener">Bron</a>` : ''}
-      </div>
-    `;
-
-    list.appendChild(entry);
-  });
-
-  container.appendChild(list);
-}
-
-
-// ================================
-//  Init
-// ================================
-
-// Zorg dat de tijdlijn pas wordt geladen nadat de DOM klaar is
-window.addEventListener('DOMContentLoaded', loadTimeline);
+        const style = document.createElement("style");
+        style.textContent = `
+          .cards:has(li:nth-child(${index + 1}) > input:checked) { --index: ${index}; }
+        `;
+        document.head.appendChild(style);
+      });
+    })
+    .catch(err => console.error("Fout bij laden van timeline.json:", err));
+});

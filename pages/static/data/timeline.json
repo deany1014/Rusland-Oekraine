@@ -1,0 +1,242 @@
+[
+  {
+    "title": "Begin van het conflict",
+    "description": "De spanningen tussen Oekraïne en Rusland nemen toe aan de grens.",
+    "source": "https://example.org/1",
+    "image": "https://example.org/image1.jpg",
+    "date": "01/01/2021",
+    "importance": "minor"
+  },
+  {
+    "title": "Troepenopbouw",
+    "description": "Rusland begint grootschalige troepenbewegingen richting Oekraïne.",
+    "source": "https://example.org/2",
+    "image": "https://example.org/image2.jpg",
+    "date": "15/02/2021",
+    "importance": "minor"
+  },
+  {
+    "title": "Diplomatieke spanning",
+    "description": "Westerse landen uiten zorgen over de situatie in Oost-Europa.",
+    "source": "https://example.org/3",
+    "image": "https://example.org/image3.jpg",
+    "date": "10/03/2021",
+    "importance": "minor"
+  },
+  {
+    "title": "Cyberaanvallen gemeld",
+    "description": "Meerdere Oekraïense overheidswebsites worden getroffen door cyberaanvallen.",
+    "source": "https://example.org/4",
+    "image": "https://example.org/image4.jpg",
+    "date": "01/12/2021",
+    "importance": "minor"
+  },
+  {
+    "title": "Invasie van Oekraïne",
+    "description": "Op 24 februari 2022 begint Rusland een grootschalige invasie van Oekraïne.",
+    "source": "https://example.org/5",
+    "image": "https://example.org/image5.jpg",
+    "date": "24/02/2022",
+    "importance": "major"
+  },
+  {
+    "title": "Verovering van Cherson",
+    "description": "Russische troepen nemen de controle over Cherson.",
+    "source": "https://example.org/6",
+    "image": "https://example.org/image6.jpg",
+    "date": "02/03/2022",
+    "importance": "minor"
+  },
+  {
+    "title": "Slag om Marioepol",
+    "description": "Marioepol wordt zwaar belegerd en grotendeels verwoest.",
+    "source": "https://example.org/7",
+    "image": "https://example.org/image7.jpg",
+    "date": "10/04/2022",
+    "importance": "major"
+  },
+  {
+    "title": "Toetredingsaanvraag EU",
+    "description": "Oekraïne vraagt officieel lidmaatschap aan bij de Europese Unie.",
+    "source": "https://example.org/8",
+    "image": "https://example.org/image8.jpg",
+    "date": "28/02/2022",
+    "importance": "major"
+  },
+  {
+    "title": "Zeeslag bij Slangeneiland",
+    "description": "Oekraïense verdedigers worden symbool voor verzet.",
+    "source": "https://example.org/9",
+    "image": "https://example.org/image9.jpg",
+    "date": "25/02/2022",
+    "importance": "side"
+  },
+  {
+    "title": "Bezoek van wereldleiders",
+    "description": "Leiders van meerdere landen bezoeken Kyiv om steun te tonen.",
+    "source": "https://example.org/10",
+    "image": "https://example.org/image10.jpg",
+    "date": "16/06/2022",
+    "importance": "side"
+  },
+  {
+    "title": "Cherson bevrijd",
+    "description": "Oekraïense troepen heroveren de stad Cherson.",
+    "source": "https://example.org/11",
+    "image": "https://example.org/image11.jpg",
+    "date": "11/11/2022",
+    "importance": "major"
+  },
+  {
+    "title": "Aanval op energie-infrastructuur",
+    "description": "Russische raketaanvallen veroorzaken grote stroomuitval in Oekraïne.",
+    "source": "https://example.org/12",
+    "image": "https://example.org/image12.jpg",
+    "date": "23/11/2022",
+    "importance": "minor"
+  },
+  {
+    "title": "Wapenleveringen aangekondigd",
+    "description": "De VS en EU kondigen nieuwe militaire steunpakketten aan.",
+    "source": "https://example.org/13",
+    "image": "https://example.org/image13.jpg",
+    "date": "05/01/2023",
+    "importance": "side"
+  },
+  {
+    "title": "Patriot-luchtafweer geleverd",
+    "description": "De eerste Patriot-systemen worden operationeel in Oekraïne.",
+    "source": "https://example.org/14",
+    "image": "https://example.org/image14.jpg",
+    "date": "12/04/2023",
+    "importance": "minor"
+  },
+  {
+    "title": "Zelensky bezoekt frontlinie",
+    "description": "De president bezoekt troepen aan de frontlinie in Donetsk.",
+    "source": "https://example.org/15",
+    "image": "https://example.org/image15.jpg",
+    "date": "15/06/2023",
+    "importance": "side"
+  },
+  {
+    "title": "Bachmoet zwaar bevochten",
+    "description": "De stad Bachmoet wordt brandpunt van hevige gevechten.",
+    "source": "https://example.org/16",
+    "image": "https://example.org/image16.jpg",
+    "date": "22/07/2023",
+    "importance": "major"
+  },
+  {
+    "title": "NAVO-top in Vilnius",
+    "description": "Oekraïne ontvangt extra militaire toezeggingen van bondgenoten.",
+    "source": "https://example.org/17",
+    "image": "https://example.org/image17.jpg",
+    "date": "11/07/2023",
+    "importance": "side"
+  },
+  {
+    "title": "Rusland trekt zich terug uit graandeal",
+    "description": "Rusland beëindigt deelname aan de Zwarte Zee graandeal.",
+    "source": "https://example.org/18",
+    "image": "https://example.org/image18.jpg",
+    "date": "17/07/2023",
+    "importance": "minor"
+  },
+  {
+    "title": "Dronenaanvallen op Moskou",
+    "description": "Meerdere drones raken gebouwen in Moskou.",
+    "source": "https://example.org/19",
+    "image": "https://example.org/image19.jpg",
+    "date": "30/07/2023",
+    "importance": "side"
+  },
+  {
+    "title": "Oekraïense tegenoffensief",
+    "description": "Oekraïne lanceert een grootschalig tegenoffensief in het zuiden.",
+    "source": "https://example.org/20",
+    "image": "https://example.org/image20.jpg",
+    "date": "04/08/2023",
+    "importance": "major"
+  },
+  {
+    "title": "Kerncentrale opnieuw doelwit",
+    "description": "De kerncentrale in Zaporizja wordt opnieuw geraakt door artillerievuur.",
+    "source": "https://example.org/21",
+    "image": "https://example.org/image21.jpg",
+    "date": "12/08/2023",
+    "importance": "minor"
+  },
+  {
+    "title": "Nieuwe sancties aangekondigd",
+    "description": "De EU kondigt een nieuw pakket sancties aan tegen Rusland.",
+    "source": "https://example.org/22",
+    "image": "https://example.org/image22.jpg",
+    "date": "20/09/2023",
+    "importance": "side"
+  },
+  {
+    "title": "Oekraïne behaalt terreinwinst",
+    "description": "Het leger meldt beperkte vooruitgang aan het front.",
+    "source": "https://example.org/23",
+    "image": "https://example.org/image23.jpg",
+    "date": "11/10/2023",
+    "importance": "minor"
+  },
+  {
+    "title": "Winteraanvallen op Kyiv",
+    "description": "Russische raketten treffen de hoofdstad opnieuw tijdens de winter.",
+    "source": "https://example.org/24",
+    "image": "https://example.org/image24.jpg",
+    "date": "20/12/2023",
+    "importance": "minor"
+  },
+  {
+    "title": "Russische presidentsverkiezingen",
+    "description": "De achtste presidentsverkiezing van Rusland vindt plaats.",
+    "source": "https://example.org/25",
+    "image": "https://example.org/image25.jpg",
+    "date": "17/03/2024",
+    "importance": "side"
+  },
+  {
+    "title": "Nieuwe sanctieronde",
+    "description": "De EU scherpt haar economische sancties verder aan.",
+    "source": "https://example.org/26",
+    "image": "https://example.org/image26.jpg",
+    "date": "05/04/2024",
+    "importance": "minor"
+  },
+  {
+    "title": "Drone-aanval op Russische haven",
+    "description": "Oekraïense drones raken een havenstad aan de Zwarte Zee.",
+    "source": "https://example.org/27",
+    "image": "https://example.org/image27.jpg",
+    "date": "12/06/2024",
+    "importance": "minor"
+  },
+  {
+    "title": "Grote offensieven in de zomer",
+    "description": "Oekraïense troepen lanceren een zomeroffensief richting Melitopol.",
+    "source": "https://example.org/28",
+    "image": "https://example.org/image28.jpg",
+    "date": "05/07/2024",
+    "importance": "major"
+  },
+  {
+    "title": "Diplomatieke vredestop",
+    "description": "Wereldleiders bespreken vredesvoorstellen in Genève.",
+    "source": "https://example.org/29",
+    "image": "https://example.org/image29.jpg",
+    "date": "10/09/2024",
+    "importance": "side"
+  },
+  {
+    "title": "2025: Nieuwe onderhandelingen",
+    "description": "Oekraïne en Rusland hervatten vredesbesprekingen.",
+    "source": "https://example.org/30",
+    "image": "https://example.org/image30.jpg",
+    "date": "15/01/2025",
+    "importance": "major"
+  }
+]

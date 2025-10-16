@@ -14,29 +14,18 @@
   <div id="site-header"></div>
   <canvas id="backgroundCanvas"></canvas>
 
-  <main>
-    <!-- Tijdlijn wordt hier dynamisch geladen -->
-    <section id="timeline-section">
-      <h2>Tijdlijn</h2>
-      <p>Bezig met laden...</p>
-    </section>
-    
+  <main class="timeline-main">
     <section>
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
-
-    <section>
-      <h2>Bronnen</h2>
-      <ul>
-        <li><a href="https://www.example.org" target="_blank" rel="noopener">Lorum Ipsum</a></li>
-      </ul>
+      <!-- De UL wordt hier door JS gevuld -->
+      <div class="cards-container">
+        <ul style="margin-top: 30px;" class="cards"></ul>
+      </div>
     </section>
   </main>
 
   <div id="site-footer"></div>
 
-  <!-- JS loader -->
+  <!-- Scripts -->
   <script src="../js/script.js"></script>
   <script src="../js/timeline.js"></script>
 </body>

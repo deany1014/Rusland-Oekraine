@@ -1,93 +1,229 @@
-/* ======================================================================
-   TIMELINE LIST
-   ====================================================================== */
-.timeline-list {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 100%;
-  max-width: 900px;
-  margin-top: 20px;
-}
+@import "https://codepen.io/cbolson/pen/rNEdgKo.css" layer(template);
+@layer template, demo;
 
-/* Timeline Entry (gebaseerd op person-card) */
-.timeline-entry {
-  display: flex;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
-  padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(6px);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
+@layer demo {
+  /* Hide radio buttons */
+  input[type="radio"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+  }
+  .cards-container {
+    --base-rotation: 0deg;
+    --full-circle: 360deg;
+    --radius: 40vw;
+    --duration: 200ms;
 
-.timeline-entry:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-}
+    --cards-container-size: calc(var(--radius) * 2);
+    --cards-container-padding: 2rem;
 
-/* Image (links) */
-.timeline-entry img {
-  flex: 0 0 100px;
-  height: 100px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  object-fit: cover;
-}
+    --border-color: transparent;
 
-/* Content (rechts) */
-.timeline-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+    --label-offset: calc(var(--radius) * -1 - 1rem);
+    --label-size: 30px;
+    --label-color: #666;
+    --label-color-hover: steelblue;
+    --label-line-h: 0;
+    --label-line-h-current: 2rem;
+    --label-dot-size: 10px;
 
-.timeline-content h3 {
-  margin: 0 0 5px;
-  font-size: 1.2rem;
-  color: #FFD54F;
-}
+    --title-top: 1.5rem;
+    --title-offset-y: 30px;
 
-.timeline-content p {
-  margin: 0 0 8px;
-  color: #dcdcdc;
-  font-size: 0.95rem;
-}
+    --info-top: 5rem;
+    --info-width: min(70%, 500px);
+    --info-offset-y: 30px;
 
-.timeline-date {
-  font-size: 0.85rem;
-  color: #aaa;
-  margin-top: 4px;
-}
+    box-sizing: content-box;
+    position: relative;
+    inset: 0;
+    margin: 5rem auto;
+    width: var(--cards-container-size);
+    height: var(--cards-container-size);
+    padding: var(--cards-container-padding);
+   
 
-/* Link styling */
-.timeline-content a {
-  color: #FFD54F;
-  font-weight: 600;
-  text-decoration: none;
+    @media (width > 600px){
+       clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+    @media (min-width: 800px) {
+        --radius: 30vw;
+        --label-size: 40px;
+        --label-dot-size: 15px;
+        --label-line-h-current: 4rem;
+        --title-top: 4rem;
+        --info-top: 8rem;
+      }
+    }
+    @media (min-width: 1200px) {
+        --label-size: 50px;
+        --border-color: var(--label-color);
+    }
+    
 }
-
-.timeline-content a:hover {
-  text-decoration: underline;
-}
-
-/* ======================================================================
-   RESPONSIVE DESIGN
-   ====================================================================== */
-@media (max-width: 700px) {
-  .timeline-entry {
-    flex-direction: column;
-    align-items: center;
+  .cards {
+    position: absolute;
+    inset: var(--cards-container-padding);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease-in-out var(--duration);
+    list-style: none;
   }
 
-  .timeline-entry img {
-    width: 140px;
-    height: 140px;
+
+
+  .cards li {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    transform-origin:center;
+    display: grid;
+    place-content: center;
+    transform: rotate(calc(var(--i) * 360deg / var(--items)));
+    pointer-events: none;
   }
 
-  .timeline-content {
+  .cards li > label {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform: translateY(var(--label-offset));
+    width: var(--label-size);
+    height: var(--label-size);
+    cursor: pointer;
+    pointer-events: initial;
     text-align: center;
+    color: var(--label-color);
+    font-size: clamp(.8rem, 2.5vw + .04rem,1rem);
+    transition: var(--duration) ease-in-out;
+
   }
-}
+  .cards li > label::before{
+      content: '';
+      position: absolute;
+      top: var(--cards-container-padding);
+      left: 50%;
+      translate: -50% 0;
+      width: var(--label-dot-size);
+      height: var(--label-dot-size);
+      aspect-ratio: 50%;
+      border-radius: 50%;
+      background-color: var(--label-color);
+      transition: background-color var(--duration) ease-in-out;
+  }
+
+  .cards li > label::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% 5px;
+    width: 2px;
+    height: var(--label-line-h);
+    background-color: steelblue;
+    transition: height 300ms ease-in-out var(--label-line-delay,0ms);
+  }
+  .cards li > label:hover{
+    --label-color: var(--label-color-hover);
+  }
+
+  .cards > li > h2,
+  .cards > li > p{
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    transform-origin: center;
+  }
+  .cards > li > h2{
+    top: var(--title-top);
+    opacity: var(--title-opacity,0);
+    translate: 0 var(--title-offset-y);
+    transition: var(--duration) ease-in-out var(--title-delay,0ms);
+  }
+  .cards > li > p{
+    top: var(--info-top);
+    margin: 0 auto;
+    width: var(--info-width);
+    z-index: 2;
+    font-size: clamp(.8rem, 2.5vw + 0.05rem, .9rem);
+    text-align: left;
+    text-wrap: pretty;
+    opacity: var(--info-opacity,0);
+    /*translate: 0 var( --info-offset-y);*/
+    transition: var(--duration) ease-in-out var(--info-delay,0ms);
+  }
+
+  /* update custom properties for checked item */
+  li:has(input:checked){
+      --label-opacity: 1;
+      --label-color: var(--label-color-hover);
+      --label-line-h: var(--label-line-h-current);
+      --label-line-delay: calc(var(--duration) * 2);
+
+      --title-opacity: 1;
+      --title-offset-y: 0;
+      --title-delay: calc(var(--duration) * 3);
+
+      --info-opacity: 1;
+      --info-offset-y: 0;
+      --info-delay: calc(var(--duration) * 4);
+      /*outline: 1px dashed red;*/
+  }
+
+  /* rotate container based on checked radio */
+  .cards:has(input:checked) {
+    transform: rotate(calc(var(--base-rotation) - (var(--index) * var(--full-circle) / var(--items))));
+  }
+
+
+    /* ===== Afbeeldingen binnen de tijdlijnkaarten ===== */
+  .timeline-image {
+    display: block;
+    margin: 1rem auto 0 auto;
+    max-width: min(80%, 400px);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+  }
+
+  /* Hover-effect (wanneer actief item is geselecteerd) */
+  li:has(input:checked) .timeline-image {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Extra: animatie als je wilt dat ze zacht inblenden */
+  .timeline-image {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  li:has(input:checked) .timeline-image {
+    opacity: 1;
+  }
+
+  /* Bron-link styling */
+  .cards li a {
+    color: steelblue;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .cards li a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+  }
