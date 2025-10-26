@@ -40,7 +40,7 @@
   <script>
   async function loadPeople() {
     try {
-      const response = await fetch("../static/betrokkenen.json");
+      const response = await fetch("../static/data/betrokkenen.json");
       if (!response.ok) throw new Error("Kon betrokkenen.json niet laden");
       const people = await response.json();
       renderPeople(people);

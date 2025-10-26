@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ul = document.querySelector(".cards");
   if (!ul) return;
 
-  fetch("../pages/static/data/timeline.json")
+  fetch("../static/data/timeline.json")
     .then(response => response.json())
     .then(timelineData => {
       // Sorteren op datum (oud → nieuw)
