@@ -1,229 +1,253 @@
-@import "https://codepen.io/cbolson/pen/rNEdgKo.css" layer(template);
-@layer template, demo;
+/* ===== Modern vertical timeline ===== */
 
-@layer demo {
-  /* Hide radio buttons */
-  input[type="radio"] {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-  }
-  .cards-container {
-    --base-rotation: 0deg;
-    --full-circle: 360deg;
-    --radius: 40vw;
-    --duration: 200ms;
-
-    --cards-container-size: calc(var(--radius) * 2);
-    --cards-container-padding: 2rem;
-
-    --border-color: transparent;
-
-    --label-offset: calc(var(--radius) * -1 - 1rem);
-    --label-size: 30px;
-    --label-color: #666;
-    --label-color-hover: steelblue;
-    --label-line-h: 0;
-    --label-line-h-current: 2rem;
-    --label-dot-size: 10px;
-
-    --title-top: 1.5rem;
-    --title-offset-y: 30px;
-
-    --info-top: 5rem;
-    --info-width: min(70%, 500px);
-    --info-offset-y: 30px;
-
-    box-sizing: content-box;
-    position: relative;
-    inset: 0;
-    margin: 5rem auto;
-    width: var(--cards-container-size);
-    height: var(--cards-container-size);
-    padding: var(--cards-container-padding);
-   
-
-    @media (width > 600px){
-       clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-    }
-    @media (min-width: 800px) {
-        --radius: 30vw;
-        --label-size: 40px;
-        --label-dot-size: 15px;
-        --label-line-h-current: 4rem;
-        --title-top: 4rem;
-        --info-top: 8rem;
-      }
-    }
-    @media (min-width: 1200px) {
-        --label-size: 50px;
-        --border-color: var(--label-color);
-    }
-    
+.timeline-wrap {
+  width: min(1100px, 100%);
+  margin: clamp(2rem, 6vw, 4rem) auto;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+  position: relative;
 }
-  .cards {
-    position: absolute;
-    inset: var(--cards-container-padding);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease-in-out var(--duration);
-    list-style: none;
-  }
 
+.timeline-wrap::before {
+  content: "";
+  position: absolute;
+  top: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: clamp(32px, 8vw, 72px);
+  width: 3px;
+  background: linear-gradient(180deg, rgba(255, 213, 79, 0.9), rgba(30, 144, 255, 0.35));
+  border-radius: 999px;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(255, 213, 79, 0.2);
+}
 
+.timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
 
-  .cards li {
-    position: absolute;
-    inset: 0;
-    margin: 0;
-    padding: 0;
-    transform-origin:center;
-    display: grid;
-    place-content: center;
-    transform: rotate(calc(var(--i) * 360deg / var(--items)));
-    pointer-events: none;
-  }
+.timeline-item {
+  position: relative;
+  padding-left: clamp(3.5rem, 11vw, 6rem);
+}
 
-  .cards li > label {
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    transform: translateY(var(--label-offset));
-    width: var(--label-size);
-    height: var(--label-size);
-    cursor: pointer;
-    pointer-events: initial;
-    text-align: center;
-    color: var(--label-color);
-    font-size: clamp(.8rem, 2.5vw + .04rem,1rem);
-    transition: var(--duration) ease-in-out;
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  left: clamp(32px, 8vw, 72px);
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 213, 79, 0.85);
+  background-color: #0e1217;
+  box-shadow:
+    0 0 0 4px rgba(255, 213, 79, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
 
-  }
-  .cards li > label::before{
-      content: '';
-      position: absolute;
-      top: var(--cards-container-padding);
-      left: 50%;
-      translate: -50% 0;
-      width: var(--label-dot-size);
-      height: var(--label-dot-size);
-      aspect-ratio: 50%;
-      border-radius: 50%;
-      background-color: var(--label-color);
-      transition: background-color var(--duration) ease-in-out;
-  }
+.timeline-card {
+  position: relative;
+  padding: clamp(1.6rem, 4vw, 2.1rem);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(22, 28, 38, 0.94), rgba(12, 16, 22, 0.78));
+  border: 1px solid rgba(255, 213, 79, 0.18);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow: hidden;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
 
-  .cards li > label::after {
-    content: '';
-    position: absolute;
-    top: 100%;
+.timeline-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd54f, #31a5ff);
+  opacity: 0.8;
+}
+
+.timeline-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 213, 79, 0.35);
+  box-shadow: 0 35px 60px rgba(0, 0, 0, 0.38);
+}
+
+.timeline-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 226, 140, 0.85);
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  line-height: 1.3;
+  color: #ffd54f;
+}
+
+.timeline-description {
+  margin: 0;
+  color: rgba(229, 229, 229, 0.92);
+  line-height: 1.7;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  text-wrap: pretty;
+}
+
+.timeline-media {
+  margin: clamp(1.25rem, 4vw, 1.75rem) 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.timeline-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.timeline-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.timeline-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(30, 144, 255, 0.16);
+  color: #ffe27a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.timeline-source::after {
+  content: "\2197";
+  font-size: 0.75rem;
+}
+
+.timeline-source:hover,
+.timeline-source:focus-visible {
+  background: rgba(30, 144, 255, 0.26);
+  color: #ffffff;
+}
+
+.timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255, 213, 79, 0.15);
+  color: rgba(255, 213, 79, 0.85);
+  border: 1px solid rgba(255, 213, 79, 0.25);
+}
+
+.importance-major .timeline-card {
+  border-color: rgba(255, 213, 79, 0.32);
+}
+
+.importance-major .timeline-card::after {
+  background: linear-gradient(90deg, #ffd54f, #ff8f6b);
+}
+
+.importance-minor .timeline-card::after {
+  background: linear-gradient(90deg, #64b5f6, #ffd54f);
+}
+
+.importance-minor .timeline-badge {
+  background: rgba(100, 181, 246, 0.12);
+  border-color: rgba(100, 181, 246, 0.28);
+  color: rgba(160, 220, 255, 0.85);
+}
+
+@media (min-width: 900px) {
+  .timeline-wrap::before {
     left: 50%;
-    translate: -50% 5px;
-    width: 2px;
-    height: var(--label-line-h);
-    background-color: steelblue;
-    transition: height 300ms ease-in-out var(--label-line-delay,0ms);
-  }
-  .cards li > label:hover{
-    --label-color: var(--label-color-hover);
+    transform: translateX(-50%);
   }
 
-  .cards > li > h2,
-  .cards > li > p{
-    position: absolute;
+  .timeline-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem);
+  }
+
+  .timeline-item {
+    padding-left: 0;
+  }
+
+  .timeline-item::before {
     left: 50%;
-    text-align: center;
-    transform: translate(-50%, 0);
-    transform-origin: center;
-  }
-  .cards > li > h2{
-    top: var(--title-top);
-    opacity: var(--title-opacity,0);
-    translate: 0 var(--title-offset-y);
-    transition: var(--duration) ease-in-out var(--title-delay,0ms);
-  }
-  .cards > li > p{
-    top: var(--info-top);
-    margin: 0 auto;
-    width: var(--info-width);
-    z-index: 2;
-    font-size: clamp(.8rem, 2.5vw + 0.05rem, .9rem);
-    text-align: left;
-    text-wrap: pretty;
-    opacity: var(--info-opacity,0);
-    /*translate: 0 var( --info-offset-y);*/
-    transition: var(--duration) ease-in-out var(--info-delay,0ms);
+    transform: translate(-50%, -50%);
   }
 
-  /* update custom properties for checked item */
-  li:has(input:checked){
-      --label-opacity: 1;
-      --label-color: var(--label-color-hover);
-      --label-line-h: var(--label-line-h-current);
-      --label-line-delay: calc(var(--duration) * 2);
-
-      --title-opacity: 1;
-      --title-offset-y: 0;
-      --title-delay: calc(var(--duration) * 3);
-
-      --info-opacity: 1;
-      --info-offset-y: 0;
-      --info-delay: calc(var(--duration) * 4);
-      /*outline: 1px dashed red;*/
+  .timeline-item {
+    display: flex;
   }
 
-  /* rotate container based on checked radio */
-  .cards:has(input:checked) {
-    transform: rotate(calc(var(--base-rotation) - (var(--index) * var(--full-circle) / var(--items))));
+  .timeline-item[data-position="left"] {
+    grid-column: 1;
+    padding-right: clamp(3rem, 6vw, 4.5rem);
+    justify-content: flex-end;
   }
 
-
-    /* ===== Afbeeldingen binnen de tijdlijnkaarten ===== */
-  .timeline-image {
-    display: block;
-    margin: 1rem auto 0 auto;
-    max-width: min(80%, 400px);
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
+  .timeline-item[data-position="left"] .timeline-card {
+    margin-left: auto;
   }
 
-  /* Hover-effect (wanneer actief item is geselecteerd) */
-  li:has(input:checked) .timeline-image {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  .timeline-item[data-position="right"] {
+    grid-column: 2;
+    padding-left: clamp(3rem, 6vw, 4.5rem);
+    justify-content: flex-start;
   }
 
-  /* Extra: animatie als je wilt dat ze zacht inblenden */
-  .timeline-image {
-    opacity: 0;
-    transition: opacity 0.4s ease;
+  .timeline-item[data-position="right"] .timeline-card {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-wrap {
+    padding-inline: clamp(1rem, 5vw, 1.5rem);
   }
 
-  li:has(input:checked) .timeline-image {
-    opacity: 1;
+  .timeline-description {
+    font-size: 0.9rem;
   }
 
-  /* Bron-link styling */
-  .cards li a {
-    color: steelblue;
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 0.5rem;
-    transition: color 0.3s ease;
+  .timeline-item::before {
+    width: 16px;
+    height: 16px;
   }
-
-  .cards li a:hover {
-    color: #1e90ff;
-    text-decoration: underline;
-  }
+}

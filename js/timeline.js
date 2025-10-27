@@ -4,44 +4,59 @@ function parseDate(dateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ul = document.querySelector(".cards");
-  if (!ul) return;
+  const list = document.querySelector(".timeline-list");
+  if (!list) return;
 
   fetch("../static/data/timeline.json")
     .then(response => response.json())
     .then(timelineData => {
-      // Sorteren op datum (oud → nieuw)
       const sorted = timelineData.sort((a, b) => parseDate(a.date) - parseDate(b.date));
 
-      // Bouw de <li> elementen
-      ul.innerHTML = "";
-      sorted.forEach((item, i) => {
+      list.innerHTML = "";
+
+      sorted.forEach((item, index) => {
         const li = document.createElement("li");
-        li.style.setProperty("--i", i);
+        const importance = (item.importance || "standard").toLowerCase();
+        const dateObj = parseDate(item.date);
+        const isoDate = Number.isNaN(dateObj.getTime()) ? item.date : dateObj.toISOString().split("T")[0];
 
-      li.innerHTML = `
-        <input type="radio" id="item-${i}" name="gallery-item" ${i === 0 ? "checked" : ""}>
-        <label for="item-${i}">${item.date}</label>
-        <h2>${item.title}</h2>
-        <p>${item.description}<br><a href="${item.source}" target="_blank">Bron</a></p>
-        ${item.image ? `<img src="${item.image}" alt="${item.title}" class="timeline-image">` : ""}
-      `;
+        li.className = `timeline-item importance-${importance}`;
+        li.dataset.position = index % 2 === 0 ? "left" : "right";
 
-        ul.appendChild(li);
-      });
+        const sourceMarkup = item.source
+          ? `<a href="${item.source}" target="_blank" rel="noopener noreferrer" class="timeline-source">Bron</a>`
+          : "";
 
-      // --- Pas CSS custom properties toe na het toevoegen ---
-      const items = ul.querySelectorAll("li");
-      ul.style.setProperty("--items", items.length);
+        let importanceLabel = "";
+        if (importance === "major") importanceLabel = "Belangrijk moment";
+        else if (importance === "minor") importanceLabel = "Context";
 
-      items.forEach((li, index) => {
-        li.style.setProperty("--i", index);
+        const badgeMarkup = importanceLabel
+          ? `<span class="timeline-badge">${importanceLabel}</span>`
+          : "";
 
-        const style = document.createElement("style");
-        style.textContent = `
-          .cards:has(li:nth-child(${index + 1}) > input:checked) { --index: ${index}; }
+        const metaSection = [sourceMarkup, badgeMarkup].filter(Boolean).join("");
+        const footerMarkup = metaSection ? `<footer class="timeline-footer">${metaSection}</footer>` : "";
+
+        const imageMarkup = item.image
+          ? `<figure class="timeline-media">
+              <img src="${item.image}" alt="${item.title}" class="timeline-image" loading="lazy">
+            </figure>`
+          : "";
+
+        li.innerHTML = `
+          <article class="timeline-card">
+            <header class="timeline-header">
+              <time class="timeline-date" datetime="${isoDate}">${item.date}</time>
+              <h3 class="timeline-title">${item.title}</h3>
+            </header>
+            <p class="timeline-description">${item.description}</p>
+            ${imageMarkup}
+            ${footerMarkup}
+          </article>
         `;
-        document.head.appendChild(style);
+
+        list.appendChild(li);
       });
     })
     .catch(err => console.error("Fout bij laden van timeline.json:", err));
