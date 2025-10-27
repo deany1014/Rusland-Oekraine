@@ -82,6 +82,31 @@
     0.044,0.0343,0.2564,0.3653,0.3448
   ];
 
+  const gdpYears = [
+    2000,2001,2002,2003,2004,
+    2005,2006,2007,2008,2009,
+    2010,2011,2012,2013,2014,
+    2015,2016,2017,2018,2019,
+    2020,2021,2022,2023,2024
+  ];
+
+  // GDP figures converted to billions of 2015 USD to keep the chart readable.
+  const ukraineGdpBillions = [
+    69.84,75.98,80.04,87.66,98.00,
+    101.01,108.65,117.58,120.22,102.02,
+    106.20,111.98,112.15,112.20,100.89,
+    91.03,93.25,95.45,98.78,101.94,
+    98.12,101.50,72.31,76.31,78.54
+  ];
+
+  const russiaGdpBillions = [
+    780.43,820.24,858.79,921.48,987.82,
+    1051.04,1137.23,1233.89,1298.06,1196.81,
+    1250.66,1304.44,1356.94,1380.76,1390.92,
+    1363.48,1366.12,1391.07,1430.12,1461.55,
+    1422.77,1506.23,1484.61,1545.21,1612.34
+  ];
+
   function waitFor(conditionFn, interval = 100, maxAttempts = 50) {
     return new Promise((resolve) => {
       let attempts = 0;
@@ -167,6 +192,7 @@
   initChart();
   initDamageChart();
   initDefenseSpendingChart();
+  initTotalGdpChart();
 
   async function initDamageChart() {
     const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
@@ -349,6 +375,88 @@
       });
     } catch (e) {
       console.error('Fout bij het maken van de defense spending chart:', e);
+    }
+  }
+
+  async function initTotalGdpChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — total GDP chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('totalGdpChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('totalGdpChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const gdpCanvas = document.getElementById('totalGdpChart');
+    const gdpCtx = gdpCanvas.getContext && gdpCanvas.getContext('2d');
+    if (!gdpCtx) {
+      console.warn('Canvas context not available — skipping total GDP chart');
+      return;
+    }
+
+    try {
+      new Chart(gdpCtx, {
+        type: 'line',
+        data: {
+          labels: gdpYears,
+          datasets: [
+            {
+              label: 'Oekraïne',
+              data: ukraineGdpBillions,
+              borderColor: 'rgba(54, 162, 235, 1)',
+              backgroundColor: 'rgba(54, 162, 235, 0.15)',
+              tension: 0.25,
+              fill: true,
+              pointRadius: 3
+            },
+            {
+              label: 'Rusland',
+              data: russiaGdpBillions,
+              borderColor: 'rgba(255, 99, 132, 1)',
+              backgroundColor: 'rgba(255, 99, 132, 0.15)',
+              tension: 0.25,
+              fill: true,
+              pointRadius: 3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Totaal BBP (mrd USD, prijspeil 2015)'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => `${context.dataset.label}: ${context.parsed.y.toFixed(2)} mrd USD`
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              beginAtZero: false,
+              title: {
+                display: true,
+                text: 'BBP (miljard USD)'
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de totaal BBP chart:', e);
     }
   }
 })();
