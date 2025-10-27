@@ -69,3 +69,39 @@ main a {
 main a:hover {
   color: #FFE27A;
 }
+
+.chart-toggle {
+  display: inline-flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.chart-toggle button {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 213, 79, 0.5);
+  background: transparent;
+  color: #FFD54F;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.chart-toggle button:hover,
+.chart-toggle button:focus {
+  border-color: rgba(255, 213, 79, 0.8);
+  transform: translateY(-1px);
+  outline: 2px solid rgba(255, 213, 79, 0.6);
+  outline-offset: 3px;
+}
+
+.chart-toggle button.active {
+  background: #FFD54F;
+  color: #0E1217;
+  border-color: #FFD54F;
+  box-shadow: 0 6px 18px rgba(255, 213, 79, 0.3);
+}
+
+.population-chart[hidden] {
+  display: none;
+}

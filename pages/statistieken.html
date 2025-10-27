@@ -38,13 +38,18 @@
     </section>
 
     <section>
-      <h2>Oekraïne: bevolkingssamenstelling</h2>
-      <canvas id="populationChart" width="700" height="400"></canvas>
-    </section>
-
-    <section>
-      <h2>Rusland: bevolkingssamenstelling</h2>
-      <canvas id="populationRussiaChart" width="700" height="400"></canvas>
+      <h2>Bevolkingssamenstelling</h2>
+      <p>Gebruik de toggle om de bevolkingssamenstelling per land te bekijken.</p>
+      <div id="populationToggle" class="chart-toggle">
+        <button type="button" data-target="population-ua" class="active">Oekraïne</button>
+        <button type="button" data-target="population-ru">Rusland</button>
+      </div>
+      <div class="population-chart" data-chart="population-ua">
+        <canvas id="populationChart" width="700" height="400"></canvas>
+      </div>
+      <div class="population-chart" data-chart="population-ru" hidden>
+        <canvas id="populationRussiaChart" width="700" height="400"></canvas>
+      </div>
     </section>
 
     <section>

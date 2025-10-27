@@ -261,6 +261,7 @@
   initTotalGdpChart();
   initPopulationChart();
   initPopulationRussiaChart();
+  initPopulationToggle();
 
   async function initDamageChart() {
     const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
@@ -743,5 +744,44 @@
     } catch (e) {
       console.error('Fout bij het maken van de population Russia chart:', e);
     }
+  }
+
+  function initPopulationToggle() {
+    const toggle = document.getElementById('populationToggle');
+    if (!toggle) {
+      return;
+    }
+
+    const buttons = Array.from(toggle.querySelectorAll('button[data-target]'));
+    if (buttons.length === 0) {
+      return;
+    }
+
+    const chartContainers = Array.from(document.querySelectorAll('.population-chart[data-chart]'));
+
+    function activate(target) {
+      chartContainers.forEach((container) => {
+        const isTarget = container.dataset.chart === target;
+        if (isTarget) {
+          container.removeAttribute('hidden');
+        } else {
+          container.setAttribute('hidden', '');
+        }
+      });
+
+      buttons.forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.target === target);
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activate(button.dataset.target);
+      });
+    });
+
+    // Ensure the default state is consistent if markup changes.
+    const activeButton = buttons.find((btn) => btn.classList.contains('active')) || buttons[0];
+    activate(activeButton.dataset.target);
   }
 })();
