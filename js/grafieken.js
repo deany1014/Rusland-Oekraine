@@ -66,6 +66,22 @@
     29768,31867,32744
   ];
 
+  const defenseYears = [
+    2000,2001,2002,2003,2004,
+    2005,2006,2007,2008,2009,
+    2010,2011,2012,2013,2014,
+    2015,2016,2017,2018,2019,
+    2020,2021,2022,2023,2024
+  ];
+
+  const defenseShareOfGdp = [
+    0.0351,0.0277,0.0268,0.0275,0.0251,
+    0.0279,0.0277,0.0287,0.0267,0.0284,
+    0.0274,0.0226,0.0235,0.0239,0.0297,
+    0.0385,0.0367,0.0324,0.0364,0.0407,
+    0.044,0.0343,0.2564,0.3653,0.3448
+  ];
+
   function waitFor(conditionFn, interval = 100, maxAttempts = 50) {
     return new Promise((resolve) => {
       let attempts = 0;
@@ -150,6 +166,7 @@
   // Start initialization (non-blocking)
   initChart();
   initDamageChart();
+  initDefenseSpendingChart();
 
   async function initDamageChart() {
     const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
@@ -249,6 +266,89 @@
       });
     } catch (e) {
       console.error('Fout bij het maken van de damage chart:', e);
+    }
+  }
+
+  async function initDefenseSpendingChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — defense spending chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('defenseSpendingChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('defenseSpendingChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const defenseCanvas = document.getElementById('defenseSpendingChart');
+    const defenseCtx = defenseCanvas.getContext && defenseCanvas.getContext('2d');
+    if (!defenseCtx) {
+      console.warn('Canvas context not available — skipping defense spending chart');
+      return;
+    }
+
+    const percentages = defenseShareOfGdp.map((value) => +(value * 100).toFixed(2));
+
+    try {
+      new Chart(defenseCtx, {
+        type: 'line',
+        data: {
+          labels: defenseYears,
+          datasets: [
+            {
+              label: 'Defensie-uitgaven (% van BBP)',
+              data: percentages,
+              borderColor: 'rgba(75, 192, 192, 1)',
+              backgroundColor: 'rgba(75, 192, 192, 0.15)',
+              tension: 0.25,
+              fill: true,
+              pointRadius: 3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: 'Besteding van het BBP aan defensie'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => `${context.parsed.y.toFixed(2)}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Percentage van BBP'
+              },
+              ticks: {
+                callback: (value) => {
+                  const num = Number(value);
+                  const decimals = num >= 10 ? 0 : 1;
+                  return `${num.toFixed(decimals)}%`;
+                }
+              },
+              suggestedMax: 40
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de defense spending chart:', e);
     }
   }
 })();
