@@ -149,4 +149,106 @@
 
   // Start initialization (non-blocking)
   initChart();
+  initDamageChart();
+
+  async function initDamageChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — damage chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('damageChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('damageChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const damageCanvas = document.getElementById('damageChart');
+    const damageCtx = damageCanvas.getContext && damageCanvas.getContext('2d');
+    if (!damageCtx) {
+      console.warn('Canvas context not available — skipping damage chart');
+      return;
+    }
+
+    const sectors = [
+      'Housing',
+      'Transportation',
+      'Energy',
+      'Commerce and industry',
+      'Education and science',
+      'Agriculture',
+      'Water supply and sanitation',
+      'Culture and tourism',
+      'Municipal services',
+      'Telecom, digital, and media',
+      'Environment and forestry',
+      'Health',
+      'Irrigation and water resources',
+      'Social protection and livelihoods',
+      'Justice and public administration',
+      'Emergency response and civil protection'
+    ];
+
+    const damageInBillions = [
+      57.6,
+      36.7,
+      20.5,
+      17.5,
+      13.4,
+      11.2,
+      4.6,
+      4.1,
+      2.9,
+      2.2,
+      1.7,
+      1.6,
+      0.7,
+      0.4,
+      0.4,
+      0.4
+    ];
+
+    try {
+      new Chart(damageCtx, {
+        type: 'bar',
+        data: {
+          labels: sectors,
+          datasets: [
+            {
+              label: 'Schade (miljard USD)',
+              data: damageInBillions,
+              backgroundColor: 'rgba(255, 159, 64, 0.6)',
+              borderColor: 'rgba(255, 159, 64, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Geschatte oorlogsschade per sector'
+            }
+          },
+          scales: {
+            x: {
+              ticks: { maxRotation: 25, minRotation: 0 }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Miljarden USD'
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de damage chart:', e);
+    }
+  }
 })();
