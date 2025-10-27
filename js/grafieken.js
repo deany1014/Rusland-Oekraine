@@ -115,6 +115,64 @@
     821.26,872.81,916.51,917.20,926.18
   ];
 
+  const populationYears = [
+    2000,2001,2002,2003,2004,
+    2005,2006,2007,2008,2009,
+    2010,2011,2012,2013,2014,
+    2015,2016,2017,2018,2019,
+    2020,2021,2022,2023,2024
+  ];
+
+  // Population figures converted to millions of people.
+  const populationTotalMillions = [
+    49.56,49.11,48.68,48.32,47.98,
+    47.59,47.28,47.06,46.82,46.62,
+    46.46,46.31,46.21,46.13,45.97,
+    45.78,45.62,45.44,45.21,44.96,
+    44.68,44.30,41.05,37.73,37.86
+  ];
+
+  const populationMenMillions = [
+    23.10,22.88,22.67,22.50,22.34,
+    22.14,21.99,21.88,21.76,21.67,
+    21.59,21.53,21.50,21.47,21.40,
+    21.32,21.25,21.17,21.07,20.95,
+    20.82,20.64,19.12,17.54,17.60
+  ];
+
+  const populationWomenMillions = [
+    26.46,26.23,26.00,25.82,25.64,
+    25.45,25.29,25.18,25.06,24.96,
+    24.86,24.78,24.71,24.66,24.57,
+    24.46,24.37,24.26,24.14,24.00,
+    23.86,23.65,21.93,20.19,20.26
+  ];
+
+  // Russia population figures (millions)
+  const populationRussiaTotalMillions = [
+    146.60,145.98,145.31,144.65,144.07,
+    143.52,143.05,142.81,142.74,142.79,
+    142.85,143.02,143.38,143.81,144.24,
+    144.64,145.02,145.29,145.40,145.45,
+    145.25,144.75,144.24,143.83,143.53
+  ];
+
+  const populationRussiaMenMillions = [
+    68.54,68.15,67.73,67.33,66.94,
+    66.57,66.25,66.09,66.03,66.04,
+    66.08,66.18,66.38,66.62,66.85,
+    67.06,67.27,67.43,67.51,67.54,
+    67.45,67.24,67.01,66.79,66.61
+  ];
+
+  const populationRussiaWomenMillions = [
+    78.06,77.82,77.57,77.32,77.13,
+    76.95,76.80,76.72,76.71,76.75,
+    76.77,76.84,77.00,77.19,77.39,
+    77.58,77.75,77.86,77.89,77.91,
+    77.79,77.51,77.23,77.04,76.93
+  ];
+
   function waitFor(conditionFn, interval = 100, maxAttempts = 50) {
     return new Promise((resolve) => {
       let attempts = 0;
@@ -201,6 +259,8 @@
   initDamageChart();
   initDefenseSpendingChart();
   initTotalGdpChart();
+  initPopulationChart();
+  initPopulationRussiaChart();
 
   async function initDamageChart() {
     const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
@@ -474,6 +534,214 @@
       });
     } catch (e) {
       console.error('Fout bij het maken van de totaal BBP chart:', e);
+    }
+  }
+
+  async function initPopulationChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — population chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('populationChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('populationChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const populationCanvas = document.getElementById('populationChart');
+    const populationCtx = populationCanvas.getContext && populationCanvas.getContext('2d');
+    if (!populationCtx) {
+      console.warn('Canvas context not available — skipping population chart');
+      return;
+    }
+
+    try {
+      new Chart(populationCtx, {
+        type: 'bar',
+        data: {
+          labels: populationYears,
+          datasets: [
+            {
+              type: 'bar',
+              label: 'Mannen',
+              data: populationMenMillions,
+              backgroundColor: 'rgba(54, 162, 235, 0.8)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1,
+              stack: 'population'
+            },
+            {
+              type: 'bar',
+              label: 'Vrouwen',
+              data: populationWomenMillions,
+              backgroundColor: 'rgba(255, 99, 132, 0.8)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1,
+              stack: 'population'
+            },
+            {
+              type: 'line',
+              label: 'Totaal',
+              data: populationTotalMillions,
+              borderColor: 'rgba(99, 255, 132, 1)',
+              backgroundColor: 'rgba(99, 255, 132, 0.3)',
+              tension: 0.2,
+              fill: false,
+              pointRadius: 3,
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Bevolking Oekraïne naar geslacht (miljoen inwoners)'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => {
+                  const value = context.parsed.y;
+                  if (typeof value !== 'number') {
+                    return context.formattedValue;
+                  }
+                  return `${context.dataset.label}: ${value.toFixed(2)} mln`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              stacked: true,
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Miljoen inwoners'
+              },
+              ticks: {
+                callback: (value) => `${Number(value).toFixed(0)}`
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de population chart:', e);
+    }
+  }
+
+  async function initPopulationRussiaChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — population Russia chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('populationRussiaChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('populationRussiaChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const populationCanvas = document.getElementById('populationRussiaChart');
+    const populationCtx = populationCanvas.getContext && populationCanvas.getContext('2d');
+    if (!populationCtx) {
+      console.warn('Canvas context not available — skipping population Russia chart');
+      return;
+    }
+
+    try {
+      new Chart(populationCtx, {
+        type: 'bar',
+        data: {
+          labels: populationYears,
+          datasets: [
+            {
+              type: 'bar',
+              label: 'Mannen',
+              data: populationRussiaMenMillions,
+              backgroundColor: 'rgba(75, 192, 192, 0.8)',
+              borderColor: 'rgba(75, 192, 192, 1)',
+              borderWidth: 1,
+              stack: 'population-russia'
+            },
+            {
+              type: 'bar',
+              label: 'Vrouwen',
+              data: populationRussiaWomenMillions,
+              backgroundColor: 'rgba(255, 159, 64, 0.8)',
+              borderColor: 'rgba(255, 159, 64, 1)',
+              borderWidth: 1,
+              stack: 'population-russia'
+            },
+            {
+              type: 'line',
+              label: 'Totaal',
+              data: populationRussiaTotalMillions,
+              borderColor: 'rgba(153, 102, 255, 1)',
+              backgroundColor: 'rgba(153, 102, 255, 0.25)',
+              tension: 0.2,
+              fill: false,
+              pointRadius: 3,
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Bevolking Rusland naar geslacht (miljoen inwoners)'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => {
+                  const value = context.parsed.y;
+                  if (typeof value !== 'number') {
+                    return context.formattedValue;
+                  }
+                  return `${context.dataset.label}: ${value.toFixed(2)} mln`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              stacked: true,
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Miljoen inwoners'
+              },
+              ticks: {
+                callback: (value) => `${Number(value).toFixed(0)}`
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de population Russia chart:', e);
     }
   }
 })();
