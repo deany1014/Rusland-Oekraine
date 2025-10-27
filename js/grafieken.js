@@ -173,6 +173,16 @@
     77.79,77.51,77.23,77.04,76.93
   ];
 
+  const ageYears = [2000,2005,2010,2015,2020,2024];
+
+  const ageUkraineChildren = [17.9,14.7,15.6,15.1,15.3,13.9];
+  const ageUkraineWorking = [68.7,70.0,70.8,69.8,67.7,67.2];
+  const ageUkraineSenior = [13.4,15.3,13.6,15.1,17.0,18.9];
+
+  const ageRussiaChildren = [15.2,15.0,14.8,16.6,17.2,17.0];
+  const ageRussiaWorking = [74.5,73.0,72.2,69.2,67.5,67.0];
+  const ageRussiaSenior = [10.3,12.0,13.0,14.2,15.3,16.0];
+
   function waitFor(conditionFn, interval = 100, maxAttempts = 50) {
     return new Promise((resolve) => {
       let attempts = 0;
@@ -261,6 +271,8 @@
   initTotalGdpChart();
   initPopulationChart();
   initPopulationRussiaChart();
+  initPopulationAgeChart();
+  initPopulationAgeRussiaChart();
   initPopulationToggle();
 
   async function initDamageChart() {
@@ -743,6 +755,196 @@
       });
     } catch (e) {
       console.error('Fout bij het maken van de population Russia chart:', e);
+    }
+  }
+
+  async function initPopulationAgeChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — population age chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('populationAgeChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('populationAgeChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const ageCanvas = document.getElementById('populationAgeChart');
+    const ageCtx = ageCanvas.getContext && ageCanvas.getContext('2d');
+    if (!ageCtx) {
+      console.warn('Canvas context not available — skipping population age chart');
+      return;
+    }
+
+    try {
+      new Chart(ageCtx, {
+        type: 'bar',
+        data: {
+          labels: ageYears,
+          datasets: [
+            {
+              label: '0–14 jaar',
+              data: ageUkraineChildren,
+              backgroundColor: 'rgba(54, 162, 235, 0.75)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1,
+              barPercentage: 0.55,
+              categoryPercentage: 0.6
+            },
+            {
+              label: '15–64 jaar',
+              data: ageUkraineWorking,
+              backgroundColor: 'rgba(255, 205, 86, 0.75)',
+              borderColor: 'rgba(255, 205, 86, 1)',
+              borderWidth: 1,
+              barPercentage: 0.55,
+              categoryPercentage: 0.6
+            },
+            {
+              label: '65+ jaar',
+              data: ageUkraineSenior,
+              backgroundColor: 'rgba(255, 99, 132, 0.75)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1,
+              barPercentage: 0.55,
+              categoryPercentage: 0.6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Leeftijdsopbouw Oekraïne (% van bevolking)'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              max: 100,
+              title: {
+                display: true,
+                text: 'Percentage van bevolking'
+              },
+              ticks: {
+                callback: (value) => `${Number(value).toFixed(0)}%`
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de population age chart:', e);
+    }
+  }
+
+  async function initPopulationAgeRussiaChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — population age Russia chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('populationAgeRussiaChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('populationAgeRussiaChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const ageCanvas = document.getElementById('populationAgeRussiaChart');
+    const ageCtx = ageCanvas.getContext && ageCanvas.getContext('2d');
+    if (!ageCtx) {
+      console.warn('Canvas context not available — skipping population age Russia chart');
+      return;
+    }
+
+    try {
+      new Chart(ageCtx, {
+        type: 'bar',
+        data: {
+          labels: ageYears,
+          datasets: [
+            {
+              label: '0–14 jaar',
+              data: ageRussiaChildren,
+              backgroundColor: 'rgba(54, 162, 235, 0.75)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1,
+              barPercentage: 0.55,
+              categoryPercentage: 0.6
+            },
+            {
+              label: '15–64 jaar',
+              data: ageRussiaWorking,
+              backgroundColor: 'rgba(255, 205, 86, 0.75)',
+              borderColor: 'rgba(255, 205, 86, 1)',
+              borderWidth: 1,
+              barPercentage: 0.55,
+              categoryPercentage: 0.6
+            },
+            {
+              label: '65+ jaar',
+              data: ageRussiaSenior,
+              backgroundColor: 'rgba(255, 99, 132, 0.75)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1,
+              barPercentage: 0.55,
+              categoryPercentage: 0.6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Leeftijdsopbouw Rusland (% van bevolking)'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              max: 100,
+              title: {
+                display: true,
+                text: 'Percentage van bevolking'
+              },
+              ticks: {
+                callback: (value) => `${Number(value).toFixed(0)}%`
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de population age Russia chart:', e);
     }
   }
 

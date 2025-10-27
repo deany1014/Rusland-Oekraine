@@ -105,3 +105,19 @@ main a:hover {
 .population-chart[hidden] {
   display: none;
 }
+
+.chart-caption {
+  margin: 18px 0 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 213, 79, 0.85);
+}
+
+.population-chart .chart-caption:first-of-type {
+  margin-top: 0;
+}
+
+.population-chart canvas + .chart-caption {
+  margin-top: 24px;
+}
