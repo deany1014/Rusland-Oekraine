@@ -107,6 +107,14 @@
     1422.77,1506.23,1484.61,1545.21,1612.34
   ];
 
+  const netherlandsGdpBillions = [
+    647.62,662.66,664.29,664.94,678.35,
+    692.15,716.63,744.47,760.23,732.37,
+    742.03,755.19,747.81,747.58,759.63,
+    775.74,794.55,816.65,835.10,854.30,
+    821.26,872.81,916.51,917.20,926.18
+  ];
+
   function waitFor(conditionFn, interval = 100, maxAttempts = 50) {
     return new Promise((resolve) => {
       let attempts = 0;
@@ -418,6 +426,15 @@
               data: russiaGdpBillions,
               borderColor: 'rgba(255, 99, 132, 1)',
               backgroundColor: 'rgba(255, 99, 132, 0.15)',
+              tension: 0.25,
+              fill: true,
+              pointRadius: 3
+            },
+            {
+              label: 'Nederland',
+              data: netherlandsGdpBillions,
+              borderColor: 'rgba(255, 159, 64, 1)',
+              backgroundColor: 'rgba(255, 159, 64, 0.15)',
               tension: 0.25,
               fill: true,
               pointRadius: 3
