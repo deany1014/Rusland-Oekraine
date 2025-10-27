@@ -74,12 +74,20 @@
     2020,2021,2022,2023,2024
   ];
 
-  const defenseShareOfGdp = [
+  const defenseShareOfGdpUkraine = [
     0.0351,0.0277,0.0268,0.0275,0.0251,
     0.0279,0.0277,0.0287,0.0267,0.0284,
     0.0274,0.0226,0.0235,0.0239,0.0297,
     0.0385,0.0367,0.0324,0.0364,0.0407,
     0.044,0.0343,0.2564,0.3653,0.3448
+  ];
+
+  const defenseShareOfGdpRussia = [
+    0.0331,0.0355,0.0376,0.0367,0.0330,
+    0.0333,0.0325,0.0312,0.0315,0.0392,
+    0.0359,0.0343,0.0369,0.0385,0.0411,
+    0.0487,0.0543,0.0425,0.0372,0.0386,
+    0.0414,0.0358,0.0461,0.0540,0.0705
   ];
 
   const gdpYears = [
@@ -396,7 +404,8 @@
       return;
     }
 
-    const percentages = defenseShareOfGdp.map((value) => +(value * 100).toFixed(2));
+    const percentagesUkraine = defenseShareOfGdpUkraine.map((value) => +(value * 100).toFixed(2));
+    const percentagesRussia = defenseShareOfGdpRussia.map((value) => +(value * 100).toFixed(2));
 
     try {
       new Chart(defenseCtx, {
@@ -405,10 +414,19 @@
           labels: defenseYears,
           datasets: [
             {
-              label: 'Defensie-uitgaven (% van BBP)',
-              data: percentages,
+              label: 'Oekraïne',
+              data: percentagesUkraine,
               borderColor: 'rgba(75, 192, 192, 1)',
               backgroundColor: 'rgba(75, 192, 192, 0.15)',
+              tension: 0.25,
+              fill: true,
+              pointRadius: 3
+            },
+            {
+              label: 'Rusland',
+              data: percentagesRussia,
+              borderColor: 'rgba(255, 99, 132, 1)',
+              backgroundColor: 'rgba(255, 99, 132, 0.15)',
               tension: 0.25,
               fill: true,
               pointRadius: 3
@@ -418,14 +436,17 @@
         options: {
           responsive: true,
           plugins: {
-            legend: { display: false },
+            legend: { position: 'top' },
             title: {
               display: true,
               text: 'Besteding van het BBP aan defensie'
             },
             tooltip: {
               callbacks: {
-                label: (context) => `${context.parsed.y.toFixed(2)}%`
+                label: (context) => {
+                  const value = context.parsed.y.toFixed(2);
+                  return `${context.dataset.label}: ${value}%`;
+                }
               }
             }
           },
