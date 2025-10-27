@@ -1,242 +1,322 @@
 [
   {
-    "title": "Begin van het conflict",
-    "description": "De spanningen tussen Oekraïne en Rusland nemen toe aan de grens.",
-    "source": "https://example.org/1",
-    "image": "https://example.org/image1.jpg",
-    "date": "01/01/2021",
+    "date": "18/03/2014",
+    "title": "Russische annexatie van de Krim",
+    "description": "Na pro-Russische troepen de Krim in februari 2014 hebben bezet, ondertekent president Vladimir Poetin op 18 maart 2014 de wet om de Krim formeel bij Rusland in te lijven. De annexatie wordt internationaal veroordeeld als illegaal; de Verenigde Naties nemen een resolutie aan (100 stemmen voor, 11 tegen) die de Krim-referendum ongeldig verklaart. Westerse landen leggen sancties op aan Rusland als strafmaatregel.",
+    "source": "https://www.reuters.com/world/russia-accuses-ukraine-organising-crimea-gas-pipe-blast-2021-09-07/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/2014-03-09_-_Perevalne_military_base_-_0115.JPG",
+    "importance": "major"
+  },
+  {
+    "date": "07/04/2014",
+    "title": "Oorlog in de Donbas breekt uit",
+    "description": "In april 2014 nemen pro-Russische separatisten overheidsgebouwen over in de Oost-Oekraïense regio’s Donetsk en Loehansk en roepen zij de zogenaamde \"Volksrepublieken\" uit. Dit markeert het begin van een gewapende opstand tegen Kiev. De Oekraïense troepen vechten terug, maar tegen eind 2014 controleren de door Rusland gesteunde rebellen een deel van de Donbas. In de jaren die volgen eist de oorlog in Oost-Oekraïne meer dan 14.000 levens.",
+    "source": "https://apnews.com/article/russia-ukraine-europe-russia-vladimir-putin-moscow-bcd0c04a2aa146e76b7e757f482f27bb",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "25/05/2014",
+    "title": "Petro Porosjenko verkozen tot president",
+    "description": "Bij de eerste presidentsverkiezingen na de Euromaidan-revolutie behaalt oligarch en \"chocoladekoning\" Petro Porosjenko op 25 mei 2014 een overtuigende overwinning met circa 55% van de stemmen. Porosjenko belooft de oorlog in het oosten te beëindigen en Oekraïne dichter bij Europa te brengen, maar staat voor de zware taak om de pro-Russische separatistische opstand neer te slaan en de door Rusland geannexeerde Krim terug te krijgen.",
+    "source": "https://www.reuters.com/article/world/ukrainians-back-poroshenko-to-find-way-out-of-crisis-idUSKBN0E603C/",
+    "image": null,
     "importance": "minor"
   },
   {
-    "title": "Troepenopbouw",
-    "description": "Rusland begint grootschalige troepenbewegingen richting Oekraïne.",
-    "source": "https://example.org/2",
-    "image": "https://example.org/image2.jpg",
-    "date": "15/02/2021",
+    "date": "17/07/2014",
+    "title": "Passagiersvlucht MH17 neergehaald",
+    "description": "Malaysia Airlines-vlucht MH17 wordt op 17 juli 2014 boven Oost-Oekraïne neergeschoten door een luchtdoelraket terwijl het gebied in handen is van door Rusland gesteunde separatisten. Alle 298 inzittenden komen om het leven. Later onderzoek onder leiding van Nederland concludeert dat een door Rusland geleverde Buk-raketinstallatie is gebruikt. Internationaal worden Rusland en de separatisten verantwoordelijk gehouden; in 2022 en 2023 veroordelen rechters in Den Haag enkele afwezige daders en stelt een hof vast dat Rusland aansprakelijk is voor het neerhalen van MH17.",
+    "source": "https://www.reuters.com/world/europe/kremlin-dismisses-claims-putin-was-involved-mh17-downing-2023-02-09/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Investigation_of_the_crash_site_of_MH-17.jpg",
+    "importance": "major"
+  },
+  {
+    "date": "05/09/2014",
+    "title": "Eerste Minsk-vredesakkoord",
+    "description": "Na hevige gevechten in de Donbas sluiten Oekraïne, Rusland en vertegenwoordigers van de separatisten op 5 september 2014 in Minsk een eerste akkoord om het conflict te beëindigen:contentReference[oaicite:13]{index=13}. Het zogenoemde Minsk-protocol voorziet in een onmiddellijk staakt-het-vuren en het terugtrekken van zware wapens. Het akkoord stort echter al snel in; schendingen blijven doorgaan en geen van de bepalingen wordt volledig uitgevoerd:contentReference[oaicite:14]{index=14}.",
+    "source": "https://apnews.com/article/russia-ukraine-europe-russia-vladimir-putin-moscow-bcd0c04a2aa146e76b7e757f482f27bb",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "12/02/2015",
+    "title": "Tweede Minsk-akkoord (Minsk II)",
+    "description": "Onder bemiddeling van Frankrijk en Duitsland onderhandelen president Petro Porosjenko en Vladimir Poetin in februari 2015 een nieuw vredesakkoord in Minsk. Het Minsk II-akkoord omvat dertien punten, waaronder een staakt-het-vuren, terugtrekking van zware wapens en een speciale status voor de separatistische gebieden. Hoewel het akkoord verdere grootschalige offensieven voorkomt, blijven er regelmatig schermutselingen plaatsvinden en beschuldigen beide partijen elkaar van het schenden van het staakt-het-vuren.",
+    "source": "https://apnews.com/article/russia-ukraine-europe-russia-vladimir-putin-moscow-bcd0c04a2aa146e76b7e757f482f27bb",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "08/11/2016",
+    "title": "Donald Trump wint Amerikaanse presidentsverkiezingen",
+    "description": "De Republikeinse kandidaat Donald Trump verslaat Hillary Clinton bij de Amerikaanse verkiezingen van 8 november 2016. In Kiev wordt de uitslag met gemengde gevoelens ontvangen. President Porosjenko feliciteert Trump en benadrukt het belang van voortzetting van de Amerikaanse steun aan Oekraïne. Veel Oekraïners vrezen echter dat Trumps bewondering voor Poetin de Westerse steun aan Kiev zou kunnen ondermijnen, al belooft Trump tijdens zijn campagne de annexatie van de Krim niet te erkennen.",
+    "source": "https://archive.kyivpost.com/ukraine-politics/ukraine-reacts-trumps-election-us-president.html",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "22/12/2017",
+    "title": "VS keurt levering van dodelijke wapens aan Oekraïne goed",
+    "description": "De regering-Trump besluit op 22 december 2017 voor het eerst dodelijke defensieve wapens aan Oekraïne te leveren, waaronder Javelin-antitankraketten. Eerder hadden de Verenigde Staten enkel niet-dodelijke militaire hulp verleend. Moskou bekritiseert de stap scherp. De levering van de Javelins – die in 2018 arriveert – wordt gezien als een belangrijke steun aan Kiev’s leger in de strijd tegen de door Rusland gesteunde separatisten.",
+    "source": "https://www.atlanticcouncil.org/blogs/ukrainealert/lethal-weapons-to-ukraine-a-primer/",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "25/11/2018",
+    "title": "Incident in de Straat van Kertsj",
+    "description": "Op 25 november 2018 worden drie Oekraïense marineschepen, die van Odessa naar Marioepol voeren, bij de Straat van Kertsj beschoten en geënterd door de Russische kustwacht. Enkele Oekraïense bemanningsleden raken gewond en de rest wordt gevangengenomen. Kiev beschuldigt Moskou van militaire agressie, terwijl Rusland stelt dat de Oekraïense schepen illegaal zijn territoriale wateren binnengedrongen. In reactie kondigt Oekraïne de krijgswet af voor 30 dagen. Het incident leidt internationaal tot oproepen aan Rusland om de schepen en bemanning vrij te laten.",
+    "source": "https://www.reuters.com/article/worldNews/idUSKCN1NU0DX",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Yani_Kapu_tugboat_attacked_by_Don_patrol_boat.png",
+    "importance": "major"
+  },
+  {
+    "date": "06/01/2019",
+    "title": "Oekraïense kerk breekt met Russisch patriarchaat",
+    "description": "Op 6 januari 2019 ondertekent de oecumenisch patriarch Bartholomeus in Istanbul een tomos (decreet) die de orthodoxe kerk van Oekraïne autocefaal (onafhankelijk) verklaart van het Moskouse patriarchaat. Hiermee wordt de eeuwenlange kerkelijke binding tussen Kiev en Moskou verbroken. De nieuwe Orthodoxe Kerk van Oekraïne onder leiding van metropoliet Epifaniy wordt erkend als zelfstandige kerk. Moskou veroordeelt de stap fel en bestempelt het als door het Westen aangemoedigd om Rusland te verzwakken.",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_Moscow-Constantinople_schism",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "21/04/2019",
+    "title": "Volodymyr Zelensky wordt president",
+    "description": "De politieke nieuwkomer en komiek Volodymyr Zelensky wint op 21 april 2019 met 73% van de stemmen de tweede ronde van de Oekraïense presidentsverkiezingen, waarmee hij zittend president Porosjenko verslaat. Zelensky voert campagne op anti-corruptieplatform en belooft een einde te maken aan de oorlog in het oosten. Zijn partij behaalt later dat jaar ook een meerderheid in het parlement, wat de weg vrijmaakt voor hervormingen. Zelensky’s verrassende zege wordt gezien als een afwijzing van de gevestigde politiek en een mandaat voor vrede in de Donbas.",
+    "source": "https://www.reuters.com/article/us-ukraine-election-zelenskiy-idUSKCN1RY0TV",
+    "image": null,
     "importance": "minor"
   },
   {
-    "title": "Diplomatieke spanning",
-    "description": "Westerse landen uiten zorgen over de situatie in Oost-Europa.",
-    "source": "https://example.org/3",
-    "image": "https://example.org/image3.jpg",
-    "date": "10/03/2021",
+    "date": "25/07/2019",
+    "title": "Telefoongesprek Trump–Zelensky leidt tot impeachment",
+    "description": "Op 25 juli 2019 vindt een berucht telefoongesprek plaats tussen de kersverse president Zelensky en de Amerikaanse president Trump. In het gesprek vraagt Trump Zelensky een onderzoek in te stellen naar zijn politieke rivaal Joe Biden, in ruil voor een bezoek en militaire hulp – wat later wordt gezien als machtsmisbruik. Een klokkenluider brengt dit aan het licht, wat eind 2019 leidt tot een afzettingsprocedure (impeachment) tegen Trump in het Amerikaanse Congres. Trump wordt uiteindelijk door de Senaat vrijgesproken, maar de affaire schaadt de relaties tussen Kiev en de VS.",
+    "source": "https://www.cnn.com/2019/09/25/politics/donald-trump-ukraine-transcript-call/index.html",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "12/06/2020",
+    "title": "NAVO verleent Oekraïne 'Enhanced Opportunities Partner'-status",
+    "description": "Op 12 juni 2020 kent de NAVO Oekraïne de status van \"Enhanced Opportunities Partner\" toe. Deze status versterkt de samenwerking tussen de NAVO en Oekraïne en geeft Kiev toegang tot intensievere informatie-uitwisseling, oefeningen en missies, zonder dat het al een lidmaatschap inhoudt. De stap wordt gezien als een signaal van verdere toenadering, terwijl volledige NAVO-toetreding op de lange baan blijft.",
+    "source": "https://www.nato.int/cps/en/natohq/news_176327.htm",
+    "image": null,
     "importance": "minor"
   },
   {
-    "title": "Cyberaanvallen gemeld",
-    "description": "Meerdere Oekraïense overheidswebsites worden getroffen door cyberaanvallen.",
-    "source": "https://example.org/4",
-    "image": "https://example.org/image4.jpg",
-    "date": "01/12/2021",
+    "date": "27/07/2020",
+    "title": "Langdurig staakt-het-vuren in Donbas",
+    "description": "Op 27 juli 2020 gaat een nieuw alomvattend staakt-het-vuren in werking in de Donbas, na overeenstemming in de Trilaterale Contactgroep. Dit bestand – beschreven als het meest effectieve sinds het begin van de oorlog – leidt tot een drastische afname van het aantal schendingen en slachtoffers in de tweede helft van 2020. Hoewel sporadische incidenten blijven voorkomen, houdt de wapenstilstand maanden stand en zorgt deze voor relatieve kalmte langs de frontlijn.",
+    "source": "https://www.kyivpost.com/post/9363",
+    "image": null,
     "importance": "minor"
   },
   {
-    "title": "Invasie van Oekraïne",
-    "description": "Op 24 februari 2022 begint Rusland een grootschalige invasie van Oekraïne.",
-    "source": "https://example.org/5",
-    "image": "https://example.org/image5.jpg",
+    "date": "07/11/2020",
+    "title": "Joe Biden wint Amerikaanse verkiezingen",
+    "description": "Joe Biden verslaat Donald Trump bij de Amerikaanse presidentsverkiezingen van november 2020. De Oekraïense leiders verwelkomen Biden’s overwinning, gezien zijn pro-Oekraïense houding als vice-president onder Obama. President Zelensky feliciteert Biden en tweet dat Oekraïne \"optimistisch is over de toekomst van het strategisch partnerschap met de VS\" en prijst de samenwerking op het gebied van veiligheid en democratie. De regering-Biden zal later een leidende rol spelen in de Westerse steun aan Oekraïne na de Russische invasie in 2022.",
+    "source": "https://archive.kyivpost.com/ukraine-politics/zelensky-congratulates-biden-hopes-for-stable-cooperation.html",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "02/02/2021",
+    "title": "Zelensky pakt pro-Russische oligarch aan",
+    "description": "President Zelensky neemt in februari 2021 maatregelen tegen de pro-Russische oligarch Viktor Medvedtsjoek en diens invloed. Op 2 februari 2021 laat Zelensky drie door Medvedtsjoek gecontroleerde pro-Russische tv-zenders verbieden wegens het verspreiden van \"desinformatie\". In mei 2021 wordt Medvedtsjoek – een persoonlijke vriend van Poetin – ook beschuldigd van hoogverraad wegens het doorspelen van staatsgeheimen en steun aan de annexatie van de Krim. Zelensky verdedigt de stappen als noodzakelijk voor de nationale veiligheid, terwijl Moskou spreekt van anti-Russische repressie.",
+    "source": "https://www.atlanticcouncil.org/blogs/ukrainealert/why-ukraines-zelensky-has-banned-pro-russian-media-tycoon-medvedchuk/",
+    "image": null,
+    "importance": "minor"
+  },
+  {
+    "date": "01/04/2021",
+    "title": "Grootste Russische troepenopbouw sinds 2014",
+    "description": "In het voorjaar van 2021 slaan waarnemers alarm over een massale Russische troepenopbouw langs de grens met Oekraïne en op de Krim. Meer dan 100.000 Russische militairen, inclusief tanks en raketartillerie, worden naar grensregio’s verplaatst – volgens analisten de grootste concentratie sinds de annexatie van de Krim in 2014. De ongekende troepenmacht doet vrees ontstaan voor een mogelijke nieuwe invasie. Hoewel de meeste eenheden in juni 2021 weer terugkeren naar hun bases, markeert deze crisis de aanloop naar latere escalatie.",
+    "source": "https://www.rferl.org/a/ukraine-russia-military-buildup/31162979.html",
+    "image": "https://cdn.cfr.org/sites/default/files/styles/large_s/public/image/2022/04/TL_2021_MilitaryBuildup.jpg",
+    "importance": "minor"
+  },
+  {
+    "date": "10/09/2021",
+    "title": "Nord Stream 2 pijpleiding voltooid",
+    "description": "Op 10 september 2021 maakt het Russische staatsbedrijf Gazprom bekend dat de aanleg van de Nord Stream 2-gaspijpleiding is afgerond. De pijpleiding onder de Oostzee, die Rusland direct met Duitsland verbindt, omzeilt Oekraïne als doorvoerland. Kiev en verschillende NAVO-landen waarschuwen dat Moskou de pijpleiding als politiek drukmiddel kan gebruiken. Duitsland stemt ermee in het project te voltooien na garanties over ondersteuning van Oekraïne en de mogelijkheid om Nord Stream 2 stil te leggen bij Russische agressie. De pijpleiding zal door de oorlog in 2022 echter nooit in gebruik worden genomen.",
+    "source": "https://www.reuters.com/business/energy/russia-completes-nord-stream-2-gas-pipeline-gazprom-2021-09-10/",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "17/12/2021",
+    "title": "Rusland eist NAVO-garanties",
+    "description": "In de aanloop naar verdere escalatie presenteert Moskou op 17 december 2021 een lijst met eisen aan de VS en de NAVO om \"veiligheidsgaranties\" te verkrijgen:contentReference[oaicite:45]{index=45}. Zo eist Rusland een formeel verbod op NAVO-uitbreiding richting het oosten (waaronder Oekraïne) en terugtrekking van NAVO-militairen uit oostelijke lidstaten:contentReference[oaicite:46]{index=46}. De VS en NAVO wijzen in januari 2022 de meeste Russische eisen af, maar stellen voor om over wapenbeheersing en vertrouwensmaatregelen te praten. President Poetin stelt zich ontevreden op over de westerse reacties en blijft troepen samentrekken nabij Oekraïne.",
+    "source": "https://www.reuters.com/world/europe/russia-demands-nato-roll-back-1997-members-keep-out-ukraine-2021-12-17/",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "21/02/2022",
+    "title": "Rusland erkent 'Volksrepublieken' Donetsk en Loehansk",
+    "description": "Op 21 februari 2022 erkent president Poetin de zelfuitgeroepen separatistische \"Volksrepubliek Donetsk\" en \"Volksrepubliek Loehansk\" als onafhankelijke staten. In een urenlange televisie-toespraak ontkent Poetin de Oekraïense natie en beweert hij dat het oosten van Oekraïne historische Russische grond is. Hij ondertekent live op tv de erkenningsdecreten en beveelt het leger om \"vredestroepen\" in de gebieden te sturen. Deze stap torpedeert het Minsk-vredesproces en wordt gezien als voorbode van een grootschalige invasie, waarop het Westen met nieuwe sancties reageert.",
+    "source": "https://www.aljazeera.com/news/2022/2/21/russia-to-recognise-ukraine-breakaway-region-kremlin-confirms",
+    "image": null,
+    "importance": "major"
+  },
+  {
     "date": "24/02/2022",
+    "title": "Volledige Russische invasie van Oekraïne",
+    "description": "In de vroege ochtend van 24 februari 2022 valt Rusland Oekraïne langs meerdere fronten binnen. Russische troepen trekken vanuit de Krim, Rusland en Belarus Oekraïne binnen, terwijl steden als Kiev, Charkiv, Odessa en Lviv bestookt worden met raketten. Poetin rechtvaardigt de \"speciale militaire operatie\" met valse beweringen dat Oekraïne door nazi’s wordt geleid en dat Rusland moet optreden ter \"demilitarisatie\" en \"denazificatie\". De internationale gemeenschap reageert met afschuw; de VS, EU en bondgenoten kondigen ongekende sancties aan tegen Rusland:contentReference[oaicite:52]{index=52}. President Biden sluit directe troepeninterventie uit, maar belooft Oekraïne “keiharde” economische en militaire steun:contentReference[oaicite:53]{index=53}.",
+    "source": "https://www.reuters.com/world/europe/russia-launches-massive-air-raid-ukraine-cities-2022-02-24/",
+    "image": null,
     "importance": "major"
   },
   {
-    "title": "Verovering van Cherson",
-    "description": "Russische troepen nemen de controle over Cherson.",
-    "source": "https://example.org/6",
-    "image": "https://example.org/image6.jpg",
-    "date": "02/03/2022",
-    "importance": "minor"
-  },
-  {
-    "title": "Slag om Marioepol",
-    "description": "Marioepol wordt zwaar belegerd en grotendeels verwoest.",
-    "source": "https://example.org/7",
-    "image": "https://example.org/image7.jpg",
-    "date": "10/04/2022",
+    "date": "02/04/2022",
+    "title": "Russische troepen trekken zich terug uit omgeving Kiev; Bucha bloedbad ontdekt",
+    "description": "Begin april 2022 dwingen Oekraïense troepen de Russen zich terug te trekken uit de noordelijke regio’s rond Kiev, waarmee de onmiddellijke dreiging voor de hoofdstad wordt afgewend. Na de Russische terugtocht komen in bevrijde voorsteden als Boetsja gruwelijkheden aan het licht: honderden burgers blijken standrechtelijk geëxecuteerd en in massagraven gedumpt. De schokkende beelden van het \"Bucha-bloedbad\" leiden tot wereldwijde verontwaardiging. President Zelensky beschuldigt Rusland van genocide en het Internationaal Strafhof opent een onderzoek naar Russische oorlogsmisdaden.",
+    "source": "https://www.bbc.com/news/world-europe-60949791",
+    "image": null,
     "importance": "major"
   },
   {
-    "title": "Toetredingsaanvraag EU",
-    "description": "Oekraïne vraagt officieel lidmaatschap aan bij de Europese Unie.",
-    "source": "https://example.org/8",
-    "image": "https://example.org/image8.jpg",
-    "date": "28/02/2022",
+    "date": "20/05/2022",
+    "title": "Val van Marioepol na maandenlange belegering",
+    "description": "Na een meedogenloze belegering van bijna drie maanden geven de laatste Oekraïense verdedigers in Marioepol zich op 20 mei 2022 over. Russische troepen nemen volledige controle over de verwoeste havenstad, die sinds maart volledig was omsingeld. Duizenden burgers zijn omgekomen in Marioepol en de stad ligt in puin. Enkele honderden uitgeputte Oekraïense strijders, die zich verschanst hadden in de Azovstal-staalfabriek, gaan krijgsgevangenschap tegemoet. De val van Marioepol geeft Rusland een landcorridor naar de Krim, maar is vooral een symbolische overwinning na hevig Oekraïens verzet.",
+    "source": "https://www.aljazeera.com/news/2022/5/21/russia-azovstal-siege-over-full-control-ukraines-mariupol",
+    "image": null,
     "importance": "major"
   },
   {
-    "title": "Zeeslag bij Slangeneiland",
-    "description": "Oekraïense verdedigers worden symbool voor verzet.",
-    "source": "https://example.org/9",
-    "image": "https://example.org/image9.jpg",
-    "date": "25/02/2022",
-    "importance": "side"
+    "date": "23/06/2022",
+    "title": "Oekraïne krijgt EU-kandidaatsstatus",
+    "description": "De Europese Raad besluit op 23 juni 2022 om Oekraïne de status van kandidaat-lid van de EU te verlenen. Deze historische stap – die volgt op de Russische invasie – wordt door EU-voorzitter Charles Michel een \"historisch moment\" genoemd en door president Zelensky gevierd als een overwinning voor Oekraïne’s toekomst in Europa. Het kandidaatschap geeft een enorme morele impuls aan de Oekraïners, al benadrukken Europese leiders dat het toetredingsproces nog jaren in beslag zal nemen en dat Oekraïne eerst hervormingen moet doorvoeren.",
+    "source": "https://www.reuters.com/world/europe/eu-sets-up-ukraine-membership-bid-big-blow-russia-2022-06-23/",
+    "image": null,
+    "importance": "major"
   },
   {
-    "title": "Bezoek van wereldleiders",
-    "description": "Leiders van meerdere landen bezoeken Kyiv om steun te tonen.",
-    "source": "https://example.org/10",
-    "image": "https://example.org/image10.jpg",
-    "date": "16/06/2022",
-    "importance": "side"
+    "date": "06/09/2022",
+    "title": "Oekraïense bliksemoffensief bevrijdt delen van Charkiv-regio",
+    "description": "Het Oekraïense leger lanceert begin september 2022 een verrassingsoffensief in de noordoostelijke oblast Charkiv. Binnen enkele dagen doorbreken Oekraïense eenheden de Russische linies en heroveren ze tientallen dorpen en steden, waaronder de strategische logistieke knooppunten Izjoem en Kupjansk. Russische troepen trekken hals over kop terug, waardoor Oekraïne in een week tijd ruim 6.000 vierkante kilometer bevrijdt. Deze succesvolle tegenaanval – de grootste Oekraïense terreinwinst sinds het begin van de invasie – geldt als een keerpunt dat de Russische bezetting in het noordoosten ineen doet storten.",
+    "source": "https://www.reuters.com/world/europe/ukraine-retakes-settlements-kharkiv-advance-russian-installed-official-2022-09-09/",
+    "image": "https://cdn.cfr.org/sites/default/files/styles/large_s/public/image/2024/02/TL_2022_Counteroffensive.jpg",
+    "importance": "major"
   },
   {
-    "title": "Cherson bevrijd",
-    "description": "Oekraïense troepen heroveren de stad Cherson.",
-    "source": "https://example.org/11",
-    "image": "https://example.org/image11.jpg",
+    "date": "21/09/2022",
+    "title": "Poetin kondigt gedeeltelijke mobilisatie aan",
+    "description": "Na tegenslagen aan het front kondigt president Poetin op 21 september 2022 de eerste mobilisatie in Rusland sinds de Tweede Wereldoorlog af. Volgens minister van Defensie Sergei Sjojgoe zullen circa 300.000 reservisten opgeroepen worden. De mobilisatie leidt tot protesten in Rusland en een massale uittocht van dienstplichtige mannen. Met deze escalatie probeert het Kremlin het tij van de oorlog te keren. Waarnemers verwachten echter dat de ongetrainde reservisten pas na maanden inzetbaar zijn en betwijfelen of deze stap de Russische problemen aan het front zal oplossen.",
+    "source": "https://www.reuters.com/world/what-does-putins-partial-mobilisation-mean-russias-military-machine-2022-09-21/",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "30/09/2022",
+    "title": "Rusland annexeert vier Oekraïense regio’s",
+    "description": "Op 30 september 2022 organiseert Poetin in het Kremlin een ceremonie om de bezette regio’s Donetsk, Loehansk, Cherson en Zaporizja eenzijdig bij Rusland in te lijven. In een toespraak verklaart Poetin dat de inwoners van deze gebieden \"voor altijd\" Russische staatsburgers worden, ondanks dat Russische troepen die gebieden maar gedeeltelijk controleren. De zogenaamde referenda enkele dagen eerder – gehouden onder oorlogsrecht – worden door Oekraïne en vrijwel alle landen verworpen als schijnvertoningen. De annexatie leidt tot nieuwe westerse sancties. Oekraïne zet zijn strijd voort om de gebieden te bevrijden.",
+    "source": "https://www.reuters.com/world/europe/putin-presides-annexation-ceremony-four-ukrainian-regions-2022-09-30/",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "10/10/2022",
+    "title": "Grootste Russische raketaanval op Oekraïne",
+    "description": "In vergelding voor een explosie op de Krimbrug twee dagen eerder vuurt Rusland op 10 oktober 2022 meer dan 80 kruisraketten af op steden in heel Oekraïne. Het is de meest grootschalige gecoördineerde luchtaanval sinds het begin van de oorlog: burgerdoelen en infrastructuur in o.a. Kiev, Lviv, Dnipro, Zaporizja en Charkiv worden getroffen tijdens de ochtendspits. Minstens 19 burgers komen om en grote delen van het land zitten zonder stroom en water. Poetin noemt de aanvallen een vergelding voor \"terroristische daden\" van Oekraïne, en waarschuwt dat bij nieuwe Oekraïense aanvallen op Russisch grondgebied de respons even zwaar zal zijn. De NAVO-landen bestempelen de bombardementen als oorlogsmisdaden wegens het opzettelijk richten op burgerdoelen.",
+    "source": "https://www.reuters.com/world/europe/russia-launches-missiles-cities-across-ukraine-putin-blames-kyiv-crimea-bridge-2022-10-10/",
+    "image": null,
+    "importance": "major"
+  },
+  {
     "date": "11/11/2022",
+    "title": "Cherson bevrijd door Oekraïne",
+    "description": "Onder druk van een Oekraïense tegenaanval ontruimen Russische troepen begin november 2022 de westelijke oever van de Dnjepr in Zuid-Oekraïne. Op 11 november trekken Oekraïense eenheden de stad Cherson binnen, de enige regionale hoofdstad die Rusland sinds februari had ingenomen. De bevrijding van Cherson, tot vreugde van de bevolking, markeert een zware nederlaag voor het Kremlin. Rusland trekt zich terug achter de brede Dnjepr-rivier, waardoor een buffer ontstaat. Hoewel de Russen zich in relatief goede orde terugtrekken, betekent het verlies van Cherson een grote strategische en symbolische klap voor Poetin’s oorlogsinspanningen.",
+    "source": "https://www.reuters.com/world/europe/russia-orders-troop-withdrawal-west-bank-dnipro-river-2022-11-09/",
+    "image": null,
     "importance": "major"
   },
   {
-    "title": "Aanval op energie-infrastructuur",
-    "description": "Russische raketaanvallen veroorzaken grote stroomuitval in Oekraïne.",
-    "source": "https://example.org/12",
-    "image": "https://example.org/image12.jpg",
-    "date": "23/11/2022",
-    "importance": "minor"
-  },
-  {
-    "title": "Wapenleveringen aangekondigd",
-    "description": "De VS en EU kondigen nieuwe militaire steunpakketten aan.",
-    "source": "https://example.org/13",
-    "image": "https://example.org/image13.jpg",
-    "date": "05/01/2023",
+    "date": "21/12/2022",
+    "title": "Zelensky spreekt het Amerikaanse Congres toe",
+    "description": "President Zelensky reist op 21 december 2022 voor het eerst sinds de invasie naar het buitenland en bezoekt Washington. In een toespraak tot een gezamenlijke zitting van het Amerikaanse Congres bedankt hij de VS voor de toegezegde militaire en financiële steun, waaronder geavanceerde wapensystemen. Hij benadrukt dat Oekraïne’s strijd onderdeel is van een wereldwijde strijd voor democratie en vraagt om volharding in de hulp. Het bezoek komt op een moment dat de VS een hulppakket van $45 miljard aan Oekraïne overweegt. Zelensky overhandigt symbolisch een Oekraïense vlag van het front aan vicepresident Harris en Speaker Pelosi, en krijgt staande ovaties van beide partijen.",
+    "source": "https://www.reuters.com/world/zelenskiy-appeal-us-lawmakers-more-aid-during-washington-visit-2022-12-21/",
+    "image": null,
     "importance": "side"
   },
   {
-    "title": "Patriot-luchtafweer geleverd",
-    "description": "De eerste Patriot-systemen worden operationeel in Oekraïne.",
-    "source": "https://example.org/14",
-    "image": "https://example.org/image14.jpg",
-    "date": "12/04/2023",
-    "importance": "minor"
-  },
-  {
-    "title": "Zelensky bezoekt frontlinie",
-    "description": "De president bezoekt troepen aan de frontlinie in Donetsk.",
-    "source": "https://example.org/15",
-    "image": "https://example.org/image15.jpg",
-    "date": "15/06/2023",
-    "importance": "side"
-  },
-  {
-    "title": "Bachmoet zwaar bevochten",
-    "description": "De stad Bachmoet wordt brandpunt van hevige gevechten.",
-    "source": "https://example.org/16",
-    "image": "https://example.org/image16.jpg",
-    "date": "22/07/2023",
+    "date": "25/01/2023",
+    "title": "Westen besluit moderne tanks te leveren aan Oekraïne",
+    "description": "Na maanden van discussie stemmen Duitsland en de Verenigde Staten op 25 januari 2023 in om moderne gevechtstanks naar Oekraïne te sturen. Bondskanselier Scholz kondigt aan 14 Leopard 2A6-tanks te leveren en geeft bondgenoten toestemming hun Leopards over te dragen. President Biden bevestigt tegelijkertijd de levering van 31 M1 Abrams-tanks door de VS. Het besluit wordt in Kiev toegejuicht als een keerpunt dat Oekraïne in staat stelt zich te verdedigen tegen Russisch offensief geweld. Moskou noemt de tankleveranties een “uiterst gevaarlijke” provocatie, maar westerse landen benadrukken dat ze niet direct betrokken raken bij het conflict.",
+    "source": "https://www.reuters.com/world/europe/germany-send-leopard-tanks-ukraine-source-2023-01-25/",
+    "image": null,
     "importance": "major"
   },
   {
-    "title": "NAVO-top in Vilnius",
-    "description": "Oekraïne ontvangt extra militaire toezeggingen van bondgenoten.",
-    "source": "https://example.org/17",
-    "image": "https://example.org/image17.jpg",
-    "date": "11/07/2023",
+    "date": "04/04/2023",
+    "title": "Finland treedt toe tot de NAVO",
+    "description": "Finland wordt op 4 april 2023 officieel lid van de NAVO, als 31e bondgenoot. De Finse vlag wordt die dag gehesen bij het NAVO-hoofdkwartier in Brussel, slechts weken nadat alle lidstaten de toetreding hebben geratificeerd. Finland’s NAVO-lidmaatschap – een direct gevolg van de Russische invasie van Oekraïne – verdubbelt de lengte van de NAVO-Rusland grens. Secretaris-generaal Stoltenberg noemt het een “historische dag” voor de Alliantie. Rusland reageert woedend op de uitbreiding en dreigt met “tegenmaatregelen”, maar ziet zich geconfronteerd met een verder verenigd westers bondgenootschap.",
+    "source": "https://www.nato.int/cps/en/natohq/news_213448.htm",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Finland_flag_raising_at_NATO_Headquarters_4_April_2023.jpg",
     "importance": "side"
   },
   {
-    "title": "Rusland trekt zich terug uit graandeal",
-    "description": "Rusland beëindigt deelname aan de Zwarte Zee graandeal.",
-    "source": "https://example.org/18",
-    "image": "https://example.org/image18.jpg",
+    "date": "20/05/2023",
+    "title": "Bachmoet valt na bloedigste slag van de oorlog",
+    "description": "Na bijna een jaar van hevige strijd verklaren Russische troepen op 20 mei 2023 de volledige inname van de oostelijke stad Bachmoet. Deze langstdurende en bijzonder bloedige slag kost aan tienduizenden militairen het leven aan beide zijden. Hoewel Bachmoet strategisch beperkt van waarde is, markeert de val de eerste Russische verovering van een grote stad sinds de zomer van 2022. Oekraïne houdt echter nog posities aan de flanken net buiten de stad bezet. Westerse inlichtingendiensten schatten dat Rusland voor Bachmoet enorme verliezen heeft geleden – mogelijk circa 100.000 manschappen in een paar maanden – voornamelijk huurlingen van de Wagner-groep.",
+    "source": "https://www.dw.com/en/russia-claims-bakhmut-after-war-long-battle/a-65664068",
+    "image": "https://cdn.cfr.org/sites/default/files/styles/large_s/public/image/2024/02/TL_2023_Bakhmut.jpg",
+    "importance": "major"
+  },
+  {
+    "date": "06/06/2023",
+    "title": "Vernietiging van Nova Kachovka-dam veroorzaakt overstroming",
+    "description": "In de vroege ochtend van 6 juni 2023 wordt de grote Kachovka-stuwdam in de rivier de Dnjepr opgeblazen, waardoor een catastrofale overstroming volgt in zuidelijk Oekraïne:contentReference[oaicite:90]{index=90}. Dorpen en steden stroomafwaarts, waaronder delen van Cherson, komen onder water te staan en tienduizenden mensen moeten worden geëvacueerd. Kiev beschuldigt Russische bezettingstroepen (die de dam controleerden) van oorlogsmisdaden door de dam op te blazen, terwijl Moskou de schuld bij Oekraïne legt. De vernietiging van de dam leidt tot immense ecologische en economische schade – de watervoorziening van de Krim en koelwater voor de Zaporizja-kerncentrale komen in gevaar, en naar schatting US$14 miljard aan schade wordt aangericht.",
+    "source": "https://en.wikipedia.org/wiki/Destruction_of_the_Kakhovka_Dam",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flooding_in_Kherson_after_the_destruction_of_the_Kakhovka_Dam_2023.jpg",
+    "importance": "major"
+  },
+  {
+    "date": "24/06/2023",
+    "title": "Muiterij van Wagner-huurlingen tegen Russische legerleiding",
+    "description": "Op 24 juni 2023 komt de Wagner Groep – een Russische huurlingenorganisatie onder leiding van Jevgeni Prigozjin – in opstand tegen het Kremlin. Wagner-troepen bezetten die dag zonder veel weerstand de Zuid-Russische stad Rostov aan de Don en rukken op richting Moskou, uit protest tegen de legerleiding die Prigozjin bekritiseert voor het falende oorlogsbeleid. Na onderhandelingen met Wit-Russische bemiddeling staakt Prigozjin de \"mars op Moskou\" binnen 24 uur en wordt een deal gesloten waarbij hij in ballingschap gaat. De kortstondige muiterij – die Poetin als “verraad” bestempelt – schudt het Russische regime op en onthult interne verdeeldheid, maar eindigt zonder grootschalig bloedvergieten. Twee maanden later komt Prigozjin om bij een verdachte vliegtuigcrash.",
+    "source": "https://www.reuters.com/world/europe/how-prigozhins-wagner-rebellion-unfolded-2023-06-24/",
+    "image": null,
+    "importance": "major"
+  },
+  {
     "date": "17/07/2023",
-    "importance": "minor"
-  },
-  {
-    "title": "Dronenaanvallen op Moskou",
-    "description": "Meerdere drones raken gebouwen in Moskou.",
-    "source": "https://example.org/19",
-    "image": "https://example.org/image19.jpg",
-    "date": "30/07/2023",
+    "title": "Rusland stapt uit Zwarte Zee-grain deal",
+    "description": "Op 17 juli 2023 kondigt Moskou aan zich terug te trekken uit het Zwarte Zee-graneninitiatief. Deze door Turkije en de VN bemiddelde afspraak had sinds juli 2022 veilige export van Oekraïense graanproducten via de Zwarte Zee mogelijk gemaakt ondanks de oorlog. Rusland voert als reden aan dat de westerse sancties zijn eigen landbouwexport belemmeren. Het aflopen van de graandeal wekt internationale bezorgdheid, vooral in ontwikkelingslanden die afhankelijk zijn van Oekraïens graan. In de weken na het einde van de deal bestoken Russische troepen Oekraïense havensteden als Odessa en silo’s met raketten, terwijl Oekraïne alternatieve transportroutes via de Donau en landroutes probeert op te voeren.",
+    "source": "https://www.reuters.com/world/russia-quits-black-sea-grain-deal-after-ukraine-blast-moscow-bridge-2023-07-17/",
+    "image": null,
     "importance": "side"
   },
   {
-    "title": "Oekraïense tegenoffensief",
-    "description": "Oekraïne lanceert een grootschalig tegenoffensief in het zuiden.",
-    "source": "https://example.org/20",
-    "image": "https://example.org/image20.jpg",
-    "date": "04/08/2023",
+    "date": "12/07/2023",
+    "title": "NAVO-top in Vilnius: veiligheidssteun voor Oekraïne, nog geen lidmaatschap",
+    "description": "Op de NAVO-top in Vilnius (11-12 juli 2023) spreken de bondgenoten unanieme steun uit voor Oekraïne en beloven ze langdurige veiligheidssteun, maar bieden ze nog geen formele uitnodiging of tijdlijn voor NAVO-lidmaatschap. In plaats daarvan richt de NAVO een nieuw NAVO-Oekraïne Raad op om de samenwerking te verdiepen, en de G7-landen presenteren een kader voor bilaterale veiligheidsgaranties – waaronder militaire hulp en training – om Oekraïne nu te steunen en toekomstige Russische agressie te ontmoedigen. President Zelensky bedankt voor de \"ongekende steun\" maar noemt het ontbreken van een concreet toetredingspad \"absurd\". De NAVO bevestigt echter in de slotverklaring dat Oekraïne op termijn lid zal worden zodra aan de voorwaarden is voldaan.",
+    "source": "https://www.reuters.com/world/ukraine-wins-security-pact-g7-nato-offers-no-membership-date-2023-07-12/",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "14/12/2023",
+    "title": "EU start toetredingsonderhandelingen met Oekraïne",
+    "description": "Op 14 december 2023 besluiten de EU-leiders formeel te beginnen met toetredingsonderhandelingen met Oekraïne:contentReference[oaicite:103]{index=103}. Dit betekent de volgende stap in het EU-lidmaatschapsproces, na de kandidatuur eerder dat jaar. President Zelensky verwelkomt het besluit als een “overwinning” voor Oekraïne en Europa:contentReference[oaicite:104]{index=104}, maar erkent dat het jaren van hervormingen zal vergen. De onderhandelingen starten tegen de achtergrond van een voortslepende oorlog en een trage Oekraïense tegenoffensief, terwijl de publieke en politieke steun in sommige EU-landen onder druk staat. Toch geldt de ontwikkeling als belangrijke erkenning van Oekraïne’s Europese perspectief en een signaal aan Moskou dat haar poging Oekraïne los te weken van het Westen is mislukt.",
+    "source": "https://www.reuters.com/world/europe/eu-opens-membership-talks-with-ukraine-amid-slow-counter-offensive-2023-12-15/",
+    "image": null,
     "importance": "major"
   },
   {
-    "title": "Kerncentrale opnieuw doelwit",
-    "description": "De kerncentrale in Zaporizja wordt opnieuw geraakt door artillerievuur.",
-    "source": "https://example.org/21",
-    "image": "https://example.org/image21.jpg",
-    "date": "12/08/2023",
-    "importance": "minor"
-  },
-  {
-    "title": "Nieuwe sancties aangekondigd",
-    "description": "De EU kondigt een nieuw pakket sancties aan tegen Rusland.",
-    "source": "https://example.org/22",
-    "image": "https://example.org/image22.jpg",
-    "date": "20/09/2023",
+    "date": "17/03/2023",
+    "title": "Internationaal Strafhof vaardigt arrestatiebevel voor Poetin uit",
+    "description": "Op 17 maart 2023 geeft het Internationaal Strafhof (ICC) in Den Haag arrestatiebevelen uit tegen de Russische president Vladimir Poetin en kinderrechtencommissaris Maria Lvova-Belova:contentReference[oaicite:105]{index=105}. Het ICC acht beide persoonlijk verantwoordelijk voor de onrechtmatige deportatie van duizenden Oekraïense kinderen naar Rusland – wat een oorlogsmisdrijf vormt. Het is de eerste keer dat een leider van een grootmacht zittend door het ICC wordt aangeklaagd. Moskou verwerpt de bevoegdheid van het ICC en kondigt aan het arrestatiebevel te negeren, maar Poetin loopt sindsdien het risico in ICC-lidstaten gearresteerd te worden. Het historische besluit van het ICC wordt door Oekraïne en westerse regeringen verwelkomd als stap richting gerechtigheid.",
+    "source": "https://www.icc-cpi.int/news/situation-ukraine-icc-judges-issue-arrest-warrants-against-vladimir-putin-and-maria-lvova",
+    "image": null,
     "importance": "side"
   },
   {
-    "title": "Oekraïne behaalt terreinwinst",
-    "description": "Het leger meldt beperkte vooruitgang aan het front.",
-    "source": "https://example.org/23",
-    "image": "https://example.org/image23.jpg",
-    "date": "11/10/2023",
-    "importance": "minor"
-  },
-  {
-    "title": "Winteraanvallen op Kyiv",
-    "description": "Russische raketten treffen de hoofdstad opnieuw tijdens de winter.",
-    "source": "https://example.org/24",
-    "image": "https://example.org/image24.jpg",
-    "date": "20/12/2023",
-    "importance": "minor"
-  },
-  {
-    "title": "Russische presidentsverkiezingen",
-    "description": "De achtste presidentsverkiezing van Rusland vindt plaats.",
-    "source": "https://example.org/25",
-    "image": "https://example.org/image25.jpg",
-    "date": "17/03/2024",
+    "date": "17/10/2023",
+    "title": "Eerste inzet van Amerikaanse langeafstandsraketten door Oekraïne",
+    "description": "Oekraïne gebruikt op 17 oktober 2023 voor het eerst door de VS geleverde ATACMS langeafstandsraketten in de strijd tegen Rusland. Bij nachtelijke aanvallen met deze precisieraketten treft Oekraïne twee Russische luchtmachtbases diep achter de frontlijn: een in bezet Berdjansk (Zuidoost-Oekraïne) en een bij Loehansk. Volgens Kiev worden daarbij negen Russische helikopters vernietigd en munitie- en luchtafweerdepots opgeblazen. De verrassingsaanval – die werd mogelijk gemaakt nadat Washington na lang aarzelen instemde met levering van een beperkt aantal ATACMS – dwingt Rusland zijn helikopters verder van het front te baseren. President Zelensky bedankt de VS voor het nakomen van de afspraken en stelt dat de inzet van de ATACMS de slagkracht van het Oekraïense tegenoffensief vergroot.",
+    "source": "https://abcnews.go.com/International/ukraine-us-supplied-atacms-long-range-missiles-time/story?id=104039539",
+    "image": null,
     "importance": "side"
-  },
-  {
-    "title": "Nieuwe sanctieronde",
-    "description": "De EU scherpt haar economische sancties verder aan.",
-    "source": "https://example.org/26",
-    "image": "https://example.org/image26.jpg",
-    "date": "05/04/2024",
-    "importance": "minor"
-  },
-  {
-    "title": "Drone-aanval op Russische haven",
-    "description": "Oekraïense drones raken een havenstad aan de Zwarte Zee.",
-    "source": "https://example.org/27",
-    "image": "https://example.org/image27.jpg",
-    "date": "12/06/2024",
-    "importance": "minor"
-  },
-  {
-    "title": "Grote offensieven in de zomer",
-    "description": "Oekraïense troepen lanceren een zomeroffensief richting Melitopol.",
-    "source": "https://example.org/28",
-    "image": "https://example.org/image28.jpg",
-    "date": "05/07/2024",
-    "importance": "major"
-  },
-  {
-    "title": "Diplomatieke vredestop",
-    "description": "Wereldleiders bespreken vredesvoorstellen in Genève.",
-    "source": "https://example.org/29",
-    "image": "https://example.org/image29.jpg",
-    "date": "10/09/2024",
-    "importance": "side"
-  },
-  {
-    "title": "2025: Nieuwe onderhandelingen",
-    "description": "Oekraïne en Rusland hervatten vredesbesprekingen.",
-    "source": "https://example.org/30",
-    "image": "https://example.org/image30.jpg",
-    "date": "15/01/2025",
-    "importance": "major"
   }
 ]
