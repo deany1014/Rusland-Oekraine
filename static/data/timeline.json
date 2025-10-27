@@ -318,5 +318,85 @@
     "source": "https://abcnews.go.com/International/ukraine-us-supplied-atacms-long-range-missiles-time/story?id=104039539",
     "image": null,
     "importance": "side"
+  },
+  {
+    "date": "04/01/2024",
+    "title": "Oekraïne intensiveert drone-aanvallen op Russisch grondgebied",
+    "description": "Begin 2024 voert Oekraïne een golf van drone-aanvallen uit op Russische energie-installaties en militaire doelen, waaronder olieraffinaderijen in de regio’s Bryansk en Kursk. Deze aanvallen markeren een verschuiving in de oorlogstactiek, waarbij Oekraïne steeds vaker Russische infrastructuur diep in vijandelijk gebied treft. Moskou kondigt vergeldingsaanvallen aan, maar de Oekraïense regering benadrukt dat de operaties bedoeld zijn om de Russische oorlogsmachine te verzwakken.",
+    "source": "https://www.reuters.com/world/europe/ukraine-launches-wave-drone-attacks-russian-oil-facilities-2024-01-04/",
+    "image": null,
+    "importance": "minor"
+  },
+  {
+    "date": "15/02/2024",
+    "title": "NAVO versterkt luchtverdediging aan oostflank",
+    "description": "De NAVO kondigt op 15 februari 2024 aan haar luchtverdedigingscapaciteiten aan de oostflank uit te breiden. Patriot- en NASAMS-systemen worden geplaatst in Polen, Slowakije en Roemenië om bescherming te bieden tegen Russische raketten en drones. De uitbreiding wordt gemotiveerd door de toegenomen Russische luchtaanvallen op Oekraïense energie-infrastructuur in de winter van 2023–2024.",
+    "source": "https://www.nato.int/cps/en/natohq/news_216325.htm",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "01/03/2024",
+    "title": "Russische winteroffensieven lopen vast bij Avdiivka en Kupjansk",
+    "description": "In maart 2024 melden militaire analisten dat Rusland er ondanks zware verliezen niet in slaagt grote terreinwinst te boeken tijdens zijn winteroffensieven bij Avdiivka en Kupjansk. Oekraïne weet de aanvallen grotendeels af te slaan met steun van Westerse precisie-artillerie en drones. De gevechten gelden als de bloedigste sinds Bachmoet, met duizenden slachtoffers aan beide kanten.",
+    "source": "https://www.bbc.com/news/world-europe-68424151",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "22/03/2024",
+    "title": "Chinese gezant bezoekt Kiev en Moskou voor vredesoverleg",
+    "description": "De Chinese speciale gezant Li Hui bezoekt in maart 2024 opnieuw Kiev en Moskou om te bemiddelen over een mogelijke wapenstilstand. Hoewel de gesprekken geen concreet resultaat opleveren, wordt China’s diplomatieke rol door beide partijen erkend. Westerse landen blijven sceptisch over Beijing’s neutraliteit vanwege de nauwe banden met Rusland.",
+    "source": "https://www.reuters.com/world/china-envoy-returns-ukraine-russia-seek-ceasefire-2024-03-22/",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "09/05/2024",
+    "title": "Poetin herkozen na omstreden verkiezingen",
+    "description": "Op 9 mei 2024 wordt Vladimir Poetin opnieuw beëdigd als president van Rusland na verkiezingen die internationaal als oneerlijk worden bestempeld. Onafhankelijke waarnemers melden uitsluiting van oppositiekandidaten en manipulatie van stemmen. In Oekraïne wordt Poetins herverkiezing gezien als signaal dat Moskou de oorlog niet zal beëindigen.",
+    "source": "https://www.dw.com/en/vladimir-putin-inaugurated-russian-president-2024/a-69094323",
+    "image": null,
+    "importance": "major"
+  },
+  {
+    "date": "06/06/2024",
+    "title": "Herdenkingen één jaar na vernietiging Kachovka-dam",
+    "description": "Op 6 juni 2024 herdenkt Oekraïne de ramp van de Kachovka-dam, waarbij duizenden mensen hun huis verloren. President Zelensky opent een herdenkingsmonument in Cherson en benadrukt de noodzaak van herstel van de ecologische schade. De VN publiceert een rapport dat Rusland rechtstreeks verantwoordelijk houdt voor de vernietiging van de dam.",
+    "source": "https://www.un.org/press/en/2024/ukr232.doc.htm",
+    "image": null,
+    "importance": "minor"
+  },
+  {
+    "date": "11/07/2024",
+    "title": "NAVO-top in Washington: blijvende steun aan Oekraïne bevestigd",
+    "description": "Tijdens de NAVO-top in Washington, ter gelegenheid van het 75-jarig bestaan van het bondgenootschap, beloven de lidstaten langdurige militaire en financiële steun aan Oekraïne. Er wordt een nieuw coördinatiecentrum opgericht in Duitsland om wapenleveringen te stroomlijnen. President Zelensky noemt de top een “doorbraak in samenwerking”, hoewel NAVO-lidmaatschap nog steeds uitblijft.",
+    "source": "https://www.nato.int/cps/en/natohq/news_219002.htm",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/NATO_Washington_Summit_2024.jpg",
+    "importance": "major"
+  },
+  {
+    "date": "23/08/2024",
+    "title": "Prigozjin officieel doodverklaard na DNA-identificatie",
+    "description": "De Russische autoriteiten bevestigen op 23 augustus 2024 via DNA-onderzoek dat Wagner-leider Jevgeni Prigozjin omkwam bij de vliegtuigcrash van juli 2023. De bevestiging maakt een einde aan maanden van speculatie. Het Kremlin houdt vol dat het om een ongeval ging, maar Westerse inlichtingendiensten achten sabotage waarschijnlijk.",
+    "source": "https://www.reuters.com/world/europe/russia-confirms-prigozhins-death-dna-tests-2024-08-23/",
+    "image": null,
+    "importance": "side"
+  },
+  {
+    "date": "10/10/2024",
+    "title": "Oekraïne lanceert eerste in eigen land gebouwde kruisraket",
+    "description": "Oekraïne test met succes een zelfontwikkelde kruisraket met een bereik van 700 kilometer. De raket, ontwikkeld door het staatsbedrijf Luch, wordt gezien als een belangrijke stap richting technologische onafhankelijkheid. De test veroorzaakt bezorgdheid in Moskou, dat waarschuwt voor escalatie. Westerse experts zien de ontwikkeling als een teken van Oekraïne’s groeiende defensiecapaciteit.",
+    "source": "https://www.ukrinform.net/rubric-ato/3829183-ukraine-tests-domestic-cruise-missile.html",
+    "image": null,
+    "importance": "minor"
+  },
+  {
+    "date": "15/02/2025",
+    "title": "EU verlengt militaire steunmissie tot 2026",
+    "description": "De Europese Unie besluit op 15 februari 2025 haar trainings- en steunmissie voor Oekraïense strijdkrachten met twee jaar te verlengen. De EU Military Assistance Mission (EUMAM) heeft sinds 2022 meer dan 60.000 Oekraïense soldaten getraind. De verlenging omvat extra middelen voor luchtverdediging, ontmijning en medische evacuatie.",
+    "source": "https://www.consilium.europa.eu/en/press/press-releases/2025/02/15/eu-extends-military-assistance-mission-to-ukraine-until-2026/",
+    "image": null,
+    "importance": "side"
   }
 ]
