@@ -130,6 +130,87 @@ a:hover {
 }
 
 /* ======================================================================
+   COMMITS SECTION
+   ====================================================================== */
+.commits-group {
+  border: 1px solid rgba(79, 195, 247, 0.35);
+  background: rgba(79, 195, 247, 0.06);
+  color: #B3E5FC;
+}
+
+.commits-status {
+  margin: 0 0 20px;
+  color: rgba(179, 229, 252, 0.85);
+  font-style: italic;
+}
+
+.commits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.commit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: rgba(10, 22, 40, 0.7);
+  border: 1px solid rgba(79, 195, 247, 0.25);
+  box-shadow: 0 6px 16px rgba(8, 15, 26, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.commit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(79, 195, 247, 0.35);
+}
+
+.commit-message {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #E3F2FD;
+}
+
+.commit-meta {
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: rgba(179, 229, 252, 0.85);
+}
+
+.commit-link {
+  align-self: flex-start;
+  font-weight: 600;
+}
+
+.commits-scroll {
+  width: 100%;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79, 195, 247, 0.6) rgba(10, 22, 40, 0.4);
+}
+
+.commits-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.commits-scroll::-webkit-scrollbar-track {
+  background: rgba(10, 22, 40, 0.4);
+  border-radius: 6px;
+}
+
+.commits-scroll::-webkit-scrollbar-thumb {
+  background: rgba(79, 195, 247, 0.6);
+  border-radius: 6px;
+}
+
+/* ======================================================================
    FOOTER
    ====================================================================== */
 footer {
