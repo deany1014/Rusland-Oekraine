@@ -191,6 +191,30 @@
   const ageRussiaWorking = [74.5,73.0,72.2,69.2,67.5,67.0];
   const ageRussiaSenior = [10.3,12.0,13.0,14.2,15.3,16.0];
 
+  const unemploymentYears = [
+    2000,2001,2002,2003,2004,
+    2005,2006,2007,2008,2009,
+    2010,2011,2012,2013,2014,
+    2015,2016,2017,2018,2019,
+    2020,2021,2022,2023,2024
+  ];
+
+  const unemploymentRussia = [
+    10.6,9.0,8.3,8.2,7.6,
+    7.2,7.1,6.1,6.2,8.4,
+    7.3,6.5,5.5,5.5,5.2,
+    5.6,5.5,5.2,4.8,4.6,
+    5.0,4.8,3.9,3.1,3.0
+  ];
+
+  const unemploymentUkraine = [
+    11.6,10.8,9.6,9.1,8.6,
+    7.2,6.8,6.4,6.4,8.8,
+    8.1,7.9,7.5,7.2,9.3,
+    9.1,9.3,9.5,8.8,8.2,
+    9.5,9.8,24.5,20.3,18.7
+  ];
+
   function waitFor(conditionFn, interval = 100, maxAttempts = 50) {
     return new Promise((resolve) => {
       let attempts = 0;
@@ -281,6 +305,7 @@
   initPopulationRussiaChart();
   initPopulationAgeChart();
   initPopulationAgeRussiaChart();
+  initUnemploymentChart();
   initPopulationToggle();
 
   async function initDamageChart() {
@@ -966,6 +991,91 @@
       });
     } catch (e) {
       console.error('Fout bij het maken van de population age Russia chart:', e);
+    }
+  }
+
+  async function initUnemploymentChart() {
+    const chartReady = await waitFor(() => typeof window.Chart !== 'undefined', 100, 50);
+    if (!chartReady) {
+      console.warn('Chart.js not available — unemployment chart skipped');
+      return;
+    }
+
+    const canvasReady = await waitFor(() => document.getElementById('unemploymentChart') !== null, 100, 20);
+    if (!canvasReady) {
+      console.warn('unemploymentChart canvas not found on this page — skipping chart creation');
+      return;
+    }
+
+    const unemploymentCanvas = document.getElementById('unemploymentChart');
+    const unemploymentCtx = unemploymentCanvas.getContext && unemploymentCanvas.getContext('2d');
+    if (!unemploymentCtx) {
+      console.warn('Canvas context not available — skipping unemployment chart');
+      return;
+    }
+
+    try {
+      new Chart(unemploymentCtx, {
+        type: 'line',
+        data: {
+          labels: unemploymentYears,
+          datasets: [
+            {
+              label: 'Rusland',
+              data: unemploymentRussia,
+              borderColor: 'rgba(255, 159, 64, 1)',
+              backgroundColor: 'rgba(255, 159, 64, 0.2)',
+              tension: 0.3,
+              fill: false,
+              pointRadius: 3
+            },
+            {
+              label: 'Oekraïne',
+              data: unemploymentUkraine,
+              borderColor: 'rgba(54, 162, 235, 1)',
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              tension: 0.3,
+              fill: false,
+              pointRadius: 3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: 'Werkloosheid volgens ILO-definitie'
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Jaar'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Percentage van beroepsbevolking'
+              },
+              ticks: {
+                callback: (value) => `${Number(value).toFixed(0)}%`
+              }
+            }
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Fout bij het maken van de unemployment chart:', e);
     }
   }
 
